@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Nunito_Sans, Montserrat, Lusitana } from "next/font/google";
+import {  Nunito_Sans, Montserrat, Lusitana } from "next/font/google";
 import "./globals.css";
 import { AppFooter } from "./ui/app-footer";
 import { AppHeader } from "./ui/app-header";
 
-// access these fonts in the 
-const inter = Inter({
-  variable: "--font-nunito",
-  weight: '900',
-  subsets: ["latin"],
-});
 
 // access these fonts in the 
 const nunito = Nunito_Sans({
