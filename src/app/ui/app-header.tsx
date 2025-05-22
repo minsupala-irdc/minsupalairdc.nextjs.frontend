@@ -63,39 +63,7 @@ export function AppHeader() {
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex items-center space-x-4">
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={handleDropdownClick}
-                className="px-4 py-2 text-left"
-              >
-                Reports
-              </button>
 
-              {isDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-32 bg-white shadow-lg rounded-md z-50">
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                    onClick={handleLinkClick}
-                  >
-                    2021
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600"
-                    onClick={handleLinkClick}
-                  >
-                    2022
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <a href="#" className="px-4 py-2">
-              About
-            </a>
-          </div>
         </div>
       </nav>
 

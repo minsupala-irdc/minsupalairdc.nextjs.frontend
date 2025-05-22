@@ -45,7 +45,7 @@ export function AppFooter() {
           <li className="mt-10">
             <ul>
               <li className="font-semibold">Webteam</li>
-              <li>minsupala-ird.itsupport@msumaguindanao.edu.ph</li>
+              <li>aasam@msumaguindanao.edu.ph</li>
             </ul>
           </li>
         </ul>
@@ -57,7 +57,7 @@ export function AppFooter() {
 
         <ul className="">
           <li>Resources</li>
-          <li>Recent works</li>
+          <li>To be added</li>
         </ul>
       </section>
 
