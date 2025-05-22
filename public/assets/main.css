@@ -1,0 +1,47 @@
+@import './base.css';
+@import "tailwindcss";
+
+/* @font-face {
+    font-family: 'Lusitana';
+    src: url('@/assets/fonts/Lusitana-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .font-lusitana {
+    font-family: 'Lusitana', serif;
+  }
+
+  @font-face {
+    font-family: 'NotoSans';
+    src: url('@/assets/fonts/NotoSans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-noto-sans{
+    font-family: 'NotoSans';
+  }
+
+  
+  @font-face {
+    font-family: 'Archivo';
+    src: url('@/assets/fonts/ArchivoBlack-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  .font-archivo{
+    font-family: 'Archivo';
+  }
+ */
+
+ 
+
+  html {
+    scroll-behavior: smooth;
+    /* font-family: 'NotoSans', sans-serif;  */
+  /* set default to noto sans */
+  }
+  
