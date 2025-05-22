@@ -234,7 +234,7 @@ export default function Home() {
       <AppCarousel></AppCarousel>
       {CreateConsortiumMemberSectionList()}
       {/* {CreateConsortiumMemberSection()} */}
-      {CreateEventList()}
+      {/* {CreateEventList()} */}
       {CreateHighlights()}
       {CreateHeadQuarterSection()}
     </>
