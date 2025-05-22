@@ -1,16 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Nunito_Sans, Montserrat, Lusitana } from "next/font/google";
 import "./globals.css";
+import { AppFooter } from "./ui/app-footer";
+import { AppHeader } from "./ui/app-header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// access these fonts in the 
+const inter = Inter({
+  variable: "--font-nunito",
+  weight: '900',
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// access these fonts in the 
+const nunito = Nunito_Sans({
+  variable: "--font-nunito",
+  weight: '700',
   subsets: ["latin"],
 });
+
+const lusitana = Lusitana({
+  variable: "--font-lusitana",
+  weight: '400',
+  subsets: ["latin"],
+});
+
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  weight: '700',
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +45,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${nunito.variable} antialiased`}
       >
+       <AppHeader></AppHeader> 
         {children}
+        <AppFooter></AppFooter>
       </body>
     </html>
   );
