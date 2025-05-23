@@ -23,7 +23,7 @@ export function AppFooter() {
 
       <section className="max-w-6xl mx-auto flex justify-between gap-6 py-10  ">
         <ul className="">
-          <li className="font-semibold">Headquarter's Address</li>
+          <li className="font-extrabold">Headquarter's Address</li>
           <li className="text-gray-500">
             56F9+R4V, Shariff Aguak - Cotabato City Rd <br />
             Datu Odin Sinsuat, Maguindanao, Philippines
@@ -33,9 +33,9 @@ export function AppFooter() {
 
         <ul className="">
           <li>
-            <ul>
-              <li className="font-semibold">Contacts</li>
-              <li className="text-gray-500">minsupala-irdc@msumaguindanao.edu.ph</li>
+            <ul>  
+              <li className="font-extrabold">Contacts</li>
+              <li className="text-gray-500">msumagirdc@msumaguindanao.edu.ph</li>
               <li>
                 <span></span>
               </li>
@@ -44,19 +44,19 @@ export function AppFooter() {
           
           <li className="mt-10">
             <ul>
-              <li className="font-semibold">Webteam</li>
+              <li className="font-extrabold">Web Team </li>
               <li>aasam@msumaguindanao.edu.ph</li>
             </ul>
           </li>
         </ul>
 
         <ul className="">
-          <li>About</li>
+          <li className="font-extrabold">About</li>
           <li>Consortium Members</li>
         </ul>
 
         <ul className="">
-          <li>Resources</li>
+          <li className="font-extrabold">Resources</li>
           <li>To be added</li>
         </ul>
       </section>
@@ -87,7 +87,7 @@ export function AppFooter() {
 
 
       <section className="max-w-6xl mx-auto flex justify-center py-4">
-        <p className="text-center text-sm text-gray-500">
+        <p className="text-center text-sm text-gray-700 font-extrabold">
           MINSUPALA IRDC © 2025 . All Rights Reserved
         </p>
       </section>
