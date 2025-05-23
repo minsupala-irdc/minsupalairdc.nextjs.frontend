@@ -8,7 +8,7 @@ import { AppHeader } from "./ui/app-header";
 // access these fonts in the 
 const nunito = Nunito_Sans({
   variable: "--font-nunito",
-  weight: '700',
+  // weight: '700',
   subsets: ["latin"],
 });
 
