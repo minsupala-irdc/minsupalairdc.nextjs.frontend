@@ -10,9 +10,16 @@ h1, h2,h3,h4,h5,h6{
   
 }
 
+.font-lusitana {
+  font-family: var(--font-lusitana);
+}
+
+
 body {
   background-color: var(--background); /* ✅ Apply background */
-  color: var(--foreground);            /* ✅ Apply text color */
+  /* color: var(--foreground);            ✅ Apply text color */
+
+  color: var(--color-gray-800);
   font-family: var(--font-nunito);     /* ✅ Apply Roboto font */
   /* font-size: large; */
 }
