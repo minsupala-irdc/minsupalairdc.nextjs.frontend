@@ -58,9 +58,9 @@ export function AppHeader() {
 
           <div className="space-y-4 mt-10">
             <Link href="/" className="block px-4 py-2" onClick={handleLinkClick}>Home</Link>
-            <a href="#home-updates" className="block px-4 py-2" onClick={handleLinkClick}>Updates</a>
-            <a href="#home-highlights" className="block px-4 py-2" onClick={handleLinkClick}>Highlights</a>
-            <a href="#home-members" className="block px-4 py-2" onClick={handleLinkClick}>Members</a>
+            <a href="/#home-updates" className="block px-4 py-2" onClick={handleLinkClick}>Updates</a>
+            <a href="/#home-highlights" className="block px-4 py-2" onClick={handleLinkClick}>Highlights</a>
+            <a href="/#home-members" className="block px-4 py-2" onClick={handleLinkClick}>Members</a>
             <Link href="/about" className="block px-4 py-2" onClick={handleLinkClick}>About</Link>
           </div>
         </div>

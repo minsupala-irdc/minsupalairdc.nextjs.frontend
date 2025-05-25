@@ -120,12 +120,24 @@ const universities = [
 
 function CreateEventList() {
   return (
-    <section className="w-full py-30 bg-gradient-to-br from-gray-0 to-gray-100 ">
+    <section
+      id="home-updates"
+      className="w-full py-30 bg-gradient-to-br from-gray-0 to-gray-100 "
+    >
       <div className="w-full max-w-5xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-10 tracking-tight sm:text-4xl">
-          <span className="text-blue-800">Upcoming</span> Events & Activities
-        </h2>
-        s
+        <div className="text-center mb-16">
+          {" "}
+          {/* Increased bottom margin for better spacing */}
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight">
+            <span className="text-blue-800">Upcoming</span> Events & Activities
+          </h2>
+          {/* Subtitle */}
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Stay informed about our latest conferences, workshops, and <br />
+            community engagement initiatives.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {eventList.map((e, index) => (
             <div
@@ -201,33 +213,10 @@ function CreateEventList() {
   );
 }
 
-function CreateConsortiumMemberSectionList() {
-  return (
-    <section className="max-w-6xl mx-auto">
-      <p className="text-3xl py-10 text-center font-montserrat">
-        Mindanao Sulu Palawan Innovative Research and Development Consortium
-      </p>
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-        {universities.map((uni, index) => (
-          <a
-            key={index}
-            href={uni.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            {uni.label}
-          </a>
-        ))}
-      </div>
-    </section>
-  );
-}
-
 function CreateConsortiumMemberSection() {
   return (
     <section
-      id="consortium"
+      id="home-members"
       className="w-full min-h-[66.66667vh] flex items-center justify-center bg-gray-50 py-30"
     >
       <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center">
@@ -241,9 +230,21 @@ function CreateConsortiumMemberSection() {
           className="w-full md:w-[30vw] h-auto object-contain"
         /> */}
 
-      <p className="text-3xl py-10 mb-10 text-center font-montserrat">
-        Mindanao Sulu Palawan Innovative Research and <br/>Development Consortium
-      </p>  
+        <p className="text-3xl  text-center font-montserrat"></p>
+
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight text-center">
+          {/* <span className="text-blue-800">Upcoming</span> Events & Activities */}
+          Mindanao Sulu Palawan{" "}
+          <span className="text-blue-800">
+            Innovative Research <br />
+            Development Consortium
+          </span>
+        </h2>
+
+        <p className="mt-4 mb-20 text-lg text-gray-600 text-center">
+          Driving sustainable development through collaborative research and
+          development.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {universities.map((university, index) => {
@@ -287,73 +288,134 @@ function CreateConsortiumMemberSection() {
 function CreateHighlightsProject1() {
   return (
     <section
-      id="highlights"
+      id="home-highlights"
       className="w-full bg-white min-h-[66.66667vh] flex flex-col items-center justify-center py-50"
     >
       <div className="max-w-6xl w-full mx-auto text-center">
-    <h1 className="text-4xl sm:text-5xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8">
-      Assessment and Characterization of Water Quality, Inland Capture Fisheries, Watershed, and Socioeconomic of Important <span className="text-blue-600">Water Bodies for Social and Economic Transformation</span>
-    </h1>
+        <h1 className="text-4xl sm:text-5xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8">
+          Assessment and Characterization of Water Quality, Inland Capture
+          Fisheries, Watershed, and Socioeconomic of Important Water Bodies{" "}
+          <br />
+          <span className="text-blue-600">
+            for Social and Economic Transformation
+          </span>
+        </h1>
 
-    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10">
-      The project aims to provide a comprehensive assessment and characterization of the important water bodies in Central Mindanao to gather scientific data and information. This management practice is for the sustainable development and transformation of the region. The project recognizes the intrinsic linkages between water quality, inland capture fisheries, watershed health, and socio-economic conditions, emphasizing the need to address these aspects holistically.
-    </p>
+        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10">
+          The project aims to provide a comfprehensive assessment and
+          characterization of the important water bodies in Central Mindanao to
+          gather scientific data and information. This management practice is
+          for the sustainable development and transformation of the region. The
+          project recognizes the intrinsic linkages between water quality,
+          inland capture fisheries, watershed health, and socio-economic
+          conditions, emphasizing the need to address these aspects
+          holistically.
+        </p>
 
+        <div className="flex flex-col items-center justify-center text-gray-700 font-semibold text-lg mb-10">
+          {/* Project Cost (aligned to the left within its own space) */}
+          <div className="flex items-center mb-6">
+            {" "}
+            {/* Added mb-6 for spacing below */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 mr-3 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <span>
+              Project Cost:{" "}
+              <span className="font-bold text-blue-600">45,000,000 PhP</span>
+            </span>
+          </div>
 
-<div className="flex flex-col items-center justify-center text-gray-700 font-semibold text-lg mb-10">
+          {/* Duration and Dates (horizontal on medium screens and above) */}
+          <div className="flex items-center flex-col sm:flex-row text-center sm:text-left space-y-2 sm:space-y-0 sm:space-x-4">
+            {" "}
+            {/* Adjusted spacing */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 mr-3 mb-2 sm:mb-0 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+              <span>
+                Duration:{" "}
+                <span className="font-bold text-blue-600">12 months</span>
+              </span>
+              <span className="hidden sm:inline-block text-gray-400">|</span>{" "}
+              {/* Separator for horizontal display, now gray */}
+              <span>
+                Start Date:{" "}
+                <span className="font-bold text-blue-600">January 1, 2024</span>
+              </span>
+              <span className="hidden sm:inline-block text-gray-400">-</span>{" "}
+              {/* Separator for horizontal display, now gray */}
+              <span>
+                End Date:{" "}
+                <span className="font-bold text-blue-600">
+                  December 31, 2024
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
 
-  {/* Project Cost (aligned to the left within its own space) */}
-  <div className="flex items-center mb-6"> {/* Added mb-6 for spacing below */}
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-    </svg>
-    <span>Project Cost: <span className="font-bold text-blue-600">45,000,000 Php</span></span>
-  </div>
+        <div className="mt-16 py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <h3 className="text-3xl sm:text-3xl font-extrabold text-gray-800 mb-12 text-center leading-tight">
+            Focus <span className="text-blue-700">Areas</span>
+          </h3>
+          <div className="max-w-3xl mx-auto">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 text-xl text-gray-700">
+              <li className="flex items-center">
+                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
+                <span className="font-semibold">Water Quality Assessment</span>
+              </li>
+              <li className="flex items-center">
+                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
+                <span className="font-semibold">Inland Capture Fisheries</span>
+              </li>
+              <li className="flex items-center">
+                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
+                <span className="font-semibold">Watershed Health</span>
+              </li>
+              <li className="flex items-center">
+                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
+                <span className="font-semibold">Socioeconomic Conditions</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  {/* Duration and Dates (horizontal on medium screens and above) */}
-  <div className="flex items-center flex-col sm:flex-row text-center sm:text-left space-y-2 sm:space-y-0 sm:space-x-4"> {/* Adjusted spacing */}
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-3 mb-2 sm:mb-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
-      <span>Duration: <span className="font-bold text-blue-600">12 months</span></span>
-      <span className="hidden sm:inline-block text-gray-400">|</span> {/* Separator for horizontal display, now gray */}
-      <span>Start Date: <span className="font-bold text-blue-600">January 1, 2024</span></span>
-      <span className="hidden sm:inline-block text-gray-400">-</span> {/* Separator for horizontal display, now gray */}
-      <span>End Date: <span className="font-bold text-blue-600">December 31, 2024</span></span>
-    </div>
-  </div>
-
-</div>
-
-<div className="mt-16 py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-  <h3 className="text-3xl sm:text-3xl font-extrabold text-gray-800 mb-12 text-center leading-tight">
-    Focus <span className="text-blue-700">Areas</span>
-  </h3>
-  <div className="max-w-3xl mx-auto">
-    <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 text-xl text-gray-700">
-      <li className="flex items-center">
-        <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
-        <span className="font-semibold">Water Quality Assessment</span>
-      </li>
-      <li className="flex items-center">
-        <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
-        <span className="font-semibold">Inland Capture Fisheries</span>
-      </li>
-      <li className="flex items-center">
-        <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
-        <span className="font-semibold">Watershed Health</span>
-      </li>
-      <li className="flex items-center">
-        <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
-        <span className="font-semibold">Socioeconomic Conditions</span>
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-  </div>
+      <div className="mt-16 px-4 sm:px-6 lg:px-8">
+        <h3 className="text-3xl mb-10 sm:text-3xl font-extrabold text-gray-800 text-center leading-tight">
+          Target{" "}
+          <span className="text-blue-700">Sustainable Development Goals</span>
+        </h3>
+        <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto text-center">
+          The Phase 1 project of MINSUPALA-IRDC is directly aligned with and
+          contributes to the realization of the following Sustainable
+          Development Goals.
+        </p>
+      </div>
 
       <div className="grid grid-cols-2 gap-6 mt-6 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap lg:gap-0 lg:mt-10 max-w-6xl w-full mx-auto justify-center">
         {sdgLogos.map((logo) => (
@@ -372,14 +434,21 @@ function CreateHighlightsProject1() {
         ))}
       </div>
 
-      <p className="text-gray=500  text-2xl m-10">
-        Resources and Findings
-      </p>
+      <div className="mt-20 px-4 sm:px-6 lg:px-8 text-center  py-16 rounded-xl">
+        {" "}
+        {/* Added padding, background, shadow, and rounded corners */}
+        <h3 className="text-3xl mb-10 sm:text-3xl font-extrabold text-gray-800 text-center leading-tight">
+          Target{" "}
+          <span className="text-blue-700">Resources and Materials</span>
+        </h3>
+        <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto">
+          Explore our comprehensive research output, detailed findings, and
+          valuable resources. Dive into the papers, reports, and data that
+          present our impactful work and contributions to the region.
+        </p>
+      </div>
 
-      <Link
-        href="#"
-        className="block cursor-pointer w-[300px] relative"
-      >
+      <Link href="#" className="block cursor-pointer w-[300px] relative">
         <Image
           src="/assets/resources/phase1-books/status-report-on-water-quality-inland-capture-fisheries-watersheds-and-socio-economic-conditions-of-important-water-bodies-in-central-mindanao.png"
           alt="Status Report Cover"
@@ -394,143 +463,94 @@ function CreateHighlightsProject1() {
 }
 function CreateHighlightsProject2() {
   return (
-<section
-  id="highlights"
-  className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-20 px-4 sm:px-6 lg:px-8"
->
-  <div className="max-w-5xl w-full mx-auto text-center">
-    <h1 className="text-4xl sm:text-5xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8">
-      Establishment of Indigenous Crop and Fish Research and Preservation <span className="text-blue-600">Center</span>
-    </h1>
+    <section
+      id="highlights"
+      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-20 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-5xl w-full mx-auto text-center">
+        <h1 className="text-4xl sm:text-5xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8">
+          Establishment of Indigenous Crop and Fish Research and Preservation{" "}
+          <span className="text-blue-600">Center</span>
+        </h1>
 
-    <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10">
-      The Indigenous Crops and Fish Research and Preservation Center aims to
-      **conserve and promote indigenous crops and fish species unique to the
-      region**. This project aims to develop indigenous products while
-      preserving traditional knowledge, biodiversity, and cultural heritage
-      associated with these agricultural produce, while also creating market
-      opportunities for local farmers.
-    </p>
+        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10">
+          The Indigenous Crops and Fish Research and Preservation Center aims to
+          **conserve and promote indigenous crops and fish species unique to the
+          region**. This project aims to develop indigenous products while
+          preserving traditional knowledge, biodiversity, and cultural heritage
+          associated with these agricultural produce, while also creating market
+          opportunities for local farmers.
+        </p>
 
-   
-<div className="flex flex-col items-center justify-center text-gray-700 font-semibold text-lg mb-10">
+        <div className="flex flex-col items-center justify-center text-gray-700 font-semibold text-lg mb-10">
+          {/* Project Cost (aligned to the left within its own space) */}
+          <div className="flex items-center mb-6">
+            {" "}
+            {/* Added mb-6 for spacing below */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 mr-3 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <span>
+              Project Cost:{" "}
+              <span className="font-bold text-blue-600">45,000,000 PhP</span>
+            </span>
+          </div>
 
-  {/* Project Cost (aligned to the left within its own space) */}
-  <div className="flex items-center mb-6"> {/* Added mb-6 for spacing below */}
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-    </svg>
-    <span>Project Cost: <span className="font-bold text-blue-600">45,000,000 Php</span></span>
-  </div>
-
-  {/* Duration and Dates (horizontal on medium screens and above) */}
-  <div className="flex items-center flex-col sm:flex-row text-center sm:text-left space-y-2 sm:space-y-0 sm:space-x-4"> {/* Adjusted spacing */}
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 mr-3 mb-2 sm:mb-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-    <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
-      <span>Duration: <span className="font-bold text-blue-600">12 months</span></span>
-      <span className="hidden sm:inline-block text-gray-400">|</span> {/* Separator for horizontal display, now gray */}
-      <span>Start Date: <span className="font-bold text-blue-600">January 1, 2025</span></span>
-      <span className="hidden sm:inline-block text-gray-400">-</span> {/* Separator for horizontal display, now gray */}
-      <span>End Date: <span className="font-bold text-blue-600">December 31, 2025</span></span>
-    </div>
-  </div>
-
-</div>
-
-
-  </div>
-</section>
+          {/* Duration and Dates (horizontal on medium screens and above) */}
+          <div className="flex items-center flex-col sm:flex-row text-center sm:text-left space-y-2 sm:space-y-0 sm:space-x-4">
+            {" "}
+            {/* Adjusted spacing */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 mr-3 mb-2 sm:mb-0 text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+              <span>
+                Duration:{" "}
+                <span className="font-bold text-blue-600">12 months</span>
+              </span>
+              <span className="hidden sm:inline-block text-gray-400">|</span>{" "}
+              {/* Separator for horizontal display, now gray */}
+              <span>
+                Start Date:{" "}
+                <span className="font-bold text-blue-600">January 1, 2025</span>
+              </span>
+              <span className="hidden sm:inline-block text-gray-400">-</span>{" "}
+              {/* Separator for horizontal display, now gray */}
+              <span>
+                End Date:{" "}
+                <span className="font-bold text-blue-600">
+                  December 31, 2025
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
-
-// function CreateHeadQuarterSection() {
-//   return (
-//     <section
-//       id="map"
-//       className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center"
-//     >
-//          <p className="mt-12 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-//           You can find the **MINSUPALA-IRDC headquarters** at: 
-//           <br className="my-2"/>
-//           <span className="font-semibold text-gray-800">
-//          Mindnaao State University - Institute of Management
-//           </span>
-//           <br className="my-2"/>
-//           We're nestled within the . We look forward to welcoming you to our facility!
-//         </p>
-//       {/* <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center">
-//         <iframe
-//           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d627.7777397715808!2d124.217656!3d7.1754256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32563760dca77263%3A0x5a167ff3a829d8a8!2sMindanao%20State%20University%20Graduate%20School!5e1!3m2!1sen!2sph!4v1715760000000!5m2!1sen!2sph"
-//           width="100%"
-//           height="550"
-//           style={{ border: 0 }}
-//           allowFullScreen
-//           loading="lazy"
-//           referrerPolicy="no-referrer-when-downgrade"
-//         ></iframe>
-//       </div> */}
-
-//           56F9+R4V, Shariff Aguak - Cotabato City Rd <br />
-//             Datu Odin Sinsuat, Maguindanao, Philippines
-
-//            <div className="relative z-10 max-w-7xl w-full mx-auto text-center px-4 sm:px-6 lg:px-8">
-//         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight mb-12 drop-shadow-sm">
-//           Locate Us: <span className="text-blue-600">MINSUPALA-IRDC Address at     56F9+R4V, Shariff Aguak - Cotabato City Rd <br />
-//             Datu Odin Sinsuat, Maguindanao, Philippines</span>
-//         </h1>
-//     </section>
-//   );
-// }
-
-
-// function CreateHeadQuarterSection() {
-//   const instituteName = "Mindanao State University - Institute of Management";
-//   const fullAddress = "56F9+R4V, Shariff Aguak - Cotabato City Rd, Datu Odin Sinsuat, Maguindanao, Philippines";
-//   const googleMapsEmbedUrl = "YOUR_ACTUAL_EMBED_MAP_URL"; // <<< IMPORTANT: Replace this
-//   const googleMapsDirectionsUrl = "YOUR_ACTUAL_Maps_DIRECTIONS_URL"; // <<< IMPORTANT: Replace this
-
-//   return (
-//     <section
-//       id="map-location"
-//       className="w-full bg-white py-16 sm:py-24 flex flex-col items-center justify-center relative overflow-hidden"
-//     >
-//       {/* Decorative Background Element */}
-//       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-70"></div>
-
-//       <div className="relative z-10 max-w-7xl w-full mx-auto text-center px-4 sm:px-6 lg:px-8">
-//         <p className="text-4xl sm:text-5xl lg:text-3xl font-extrabold text-gray-800 leading-tight mb-4">
-//           MINSUPALA-IRDC <span className="text-blue-600">Headquarters</span>
-//         </p>
-//         <p>
-//           We look forward to welcoming you to our facility!</p>
-
-//         {/* Address and Short Text */}
-//         <p className="mt-1 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-10">
-//           <br className="my-2"/>
-//           <span className="font-semibold text-gray-800">
-//             Direction on google maps  {instituteName}  {fullAddress}
-//           </span>
-//           <br className="my-2"/>
-//         </p>
-
-//         <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center">
-//          <iframe
-//           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d627.7777397715808!2d124.217656!3d7.1754256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32563760dca77263%3A0x5a167ff3a829d8a8!2sMindanao%20State%20University%20Graduate%20School!5e1!3m2!1sen!2sph!4v1715760000000!5m2!1sen!2sph"
-//           width="100%"
-//           height="550"
-//           style={{ border: 0 }}
-//           allowFullScreen
-//           loading="lazy"
-//           referrerPolicy="no-referrer-when-downgrade"
-//         ></iframe>
-//       </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 
 function CreateHeadQuarterSection() {
   const instituteName = "Mindanao State University - Institute of Management";
@@ -546,7 +566,7 @@ function CreateHeadQuarterSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-70"></div>
 
       <div className="relative z-10 max-w-7xl w-full mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <p className="text-4xl sm:text-5xl lg:text-3xl font-extrabold text-gray-800 leading-tight mb-6 drop-shadow-sm font-montserrat">
+        <p className="text-4xl sm:text-5xl  font-extrabold text-gray-800 leading-tight mb-6 drop-shadow-sm font-montserrat">
           MINSUPALA-IRDC <span className="text-blue-600">Headquarters</span>
         </p>
 
@@ -570,14 +590,119 @@ function CreateHeadQuarterSection() {
   );
 }
 
+function ConstiumHeadWelcomeSection() {
+  // Replace YourComponent with the actual component name where you're adding this
+  return (
+    <>
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <h2 className="text-5xl sm:text-6xl font-extrabold text-gray-900 mb-16 text-center leading-tight drop-shadow-sm ">
+            Message from the Consortium{" "}
+            <span className="text-blue-700">Lead</span>
+          </h2>
+
+          <div className="flex flex-col items-center">
+            {" "}
+            {/* Center content on small screens */}
+            <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-gray-100 mb-10">
+              {/* Replace with actual President's image path */}
+              <Image
+                src="/assets/placeholders/president-placeholder.jpg"
+                alt="President of MINSUPALA-IRDC"
+                width={224} // 56 * 4
+                height={224} // 56 * 4
+                objectFit="cover"
+                className="object-cover" // For Tailwind JIT
+              />
+            </div>
+            <div className="p-8 md:p-10 text-gray-700 text-lg sm:text-xl leading-relaxed text-center italic max-w-3xl">
+              <p className="mb-6">
+                "Greetings from the MINSUPALA-IRDC! Our journey is one of
+                impactful research and unwavering dedication to the sustainable
+                development of our vibrant regions. We stand committed to
+                fostering innovation and collaboration that directly benefits
+                the communities we serve."
+              </p>
+              <p className="mt-8 text-2xl font-semibold text-gray-800">
+                — Bai Hejira Nefertiti Sinsuat-Macalandong Limbona
+              </p>
+              <p className="text-blue-600 text-base">
+                Consortium Lead, MINSUPALA-IRDC
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+// function CreateMinsupalaIRDCHighlights() { // Replace YourComponent with the actual component name where you're adding this
+//   return (
+//     <>
+//       {/* ... previous sections ... */}
+
+//       <div className="w-full bg-neutral-900 py-10 sm:py-12 relative overflow-hidden">
+//         {/* Content */}
+//         <div className="relative z-10 text-center px-4">
+//           <h3 className="text-3xl sm:text-4xl lg:text-5xl  font-extrabold tracking-wide uppercase leading-tight">
+//             {/* Added opacity-80 to the main text color */}
+//             <span className="text-gray-50  opacity-90">MINSUPALA IRDC</span> <span className="text-blue-400  opacity-90">Highlights</span>
+//           </h3>
+//           <p className="mt-4 text-lg text-gray-300 opacity-80 max-w-2xl mx-auto">
+//             Discover the key achievements and impactful projects<br/> that define our commitment to the region.
+//           </p>
+//         </div>
+
+//         {/* needs to be an arrow pointing down here */}
+//       </div>
+
+//     </>
+//   );
+// }
+
+function CreateMinsupalaIRDCHighlights() {
+  const currentYear = new Date().getFullYear(); // Dynamically get the current year
+
+  return (
+    <>
+      <div className="w-full bg-neutral-900 py-10 sm:py-12 mt-16 relative overflow-hidden">
+        {/* Subtle Geometric Dot Pattern Overlay (more integrated) */}
+        <div
+          className="absolute inset-0 z-0 opacity-10" // Reduced opacity slightly for more subtlety
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='1' fill='%23a0aec0'/%3E%3C/svg%3E\")", // Changed fill to a soft gray for better blend
+            backgroundSize: "20px 20px",
+          }}
+        ></div>
+
+        {/* Content */}
+        <div className="relative z-10 text-centerf px-4">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide uppercase leading-tight">
+            <span className="text-gray-50 opacity-90">MINSUPALA IRDC</span>{" "}
+            <span className="text-blue-400 opacity-90">Highlights</span>
+          </h3>
+          <p className="mt-4 text-lg text-gray-300 opacity-80 max-w-2xl mx-auto">
+            Discover the key achievements and impactful projects
+            <br className="sm:hidden" /> that define our commitment to the
+            region.
+          </p>
+        </div>
+        {/* add z index triangle here pointing down */}
+      </div>
+    </>
+  );
+}
 
 export default function Home() {
   return (
     <>
       <AppCarousel></AppCarousel>
       {CreateEventList()}
-      {/* {CreateConsortiumMemberSectionList()} */}
       {CreateConsortiumMemberSection()}
+      {/* {ConstiumHeadWelcomeSection() } */}
+      {CreateMinsupalaIRDCHighlights()}
       {CreateHighlightsProject1()}
       {CreateHighlightsProject2()}
       {CreateHeadQuarterSection()}
