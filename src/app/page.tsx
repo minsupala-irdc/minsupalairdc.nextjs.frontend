@@ -565,8 +565,10 @@ function CreateHeadQuarterSection() {
       {/* Decorative Background Element */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-70"></div>
 
-      <div className="relative z-10 max-w-7xl w-full mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <p className="text-4xl sm:text-5xl  font-extrabold text-gray-800 leading-tight mb-6 drop-shadow-sm font-montserrat">
+      
+
+      <div className="relative z-10 max-w-7xl  sm:text-4xl lg:text-5xl  w-full mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <p className="text-3xl  font-extrabold text-gray-800 leading-tight mb-6 drop-shadow-sm font-montserrat">
           MINSUPALA-IRDC <span className="text-blue-600">Headquarters</span>
         </p>
 
@@ -678,7 +680,7 @@ function CreateMinsupalaIRDCHighlights() {
         ></div>
 
         {/* Content */}
-        <div className="relative z-10 text-centerf px-4">
+        <div className="relative z-10 text-centerf px-4 text-center">
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide uppercase leading-tight">
             <span className="text-gray-50 opacity-90">MINSUPALA IRDC</span>{" "}
             <span className="text-blue-400 opacity-90">Highlights</span>
