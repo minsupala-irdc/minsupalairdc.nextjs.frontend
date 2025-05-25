@@ -122,7 +122,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     date: 'January 30, 2024',
     title: 'MINSUPALA-IRDC organized its first consortium meeting',
-    description: "The meeting reaffirmed the initial agreement and discussed implementation strategies for the approved 45-million-peso research project titled 'Assessment and Characterization of Water Quality, Inland Capture Fisheries, Watershed, and Socio-Economic Aspects of Important Water Bodies for Social and Economic Transformation.' This project, a priority under the consortium’s Research and Development agenda, aims to optimize the use of Central Mindanao’s abundant natural water resources",
+    description: "The meeting reaffirmed the initial agreement and discussed implementation strategies for the approved 45-million-peso research project titled 'Assessment and Characterization of Water Quality, Inland Capture Fisheries, Watershed, and Socio-Economic Aspects of Important Water Bodies for Social and Economic Transformation.' This project, a priority under the consortium’s Research and Development agenda, aims to optimize the use of Central Mindanao’s abundant natural water resources.",
     imageUrl: '/assets/resources/irdc-timeline/january-30-2024.jpg'
   },
   {
