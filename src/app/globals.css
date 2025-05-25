@@ -6,14 +6,34 @@
 }
 
 
-h1, h2,h3,h4,h5,h6{
-  
+h1{
+  font-family: var(--font-lusitana);
 }
 
 .font-lusitana {
   font-family: var(--font-lusitana);
 }
 
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
+
+
+
+.font-nunito {
+  font-family: var(--font-nunito);
+}
+
+
+/* Add basic reset/normalize for consistency (optional, but good practice) */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 body {
   background-color: var(--background); /* ✅ Apply background */
