@@ -683,11 +683,11 @@ function CreateMinsupalaIRDCHighlights() {
         <div className="relative z-10 text-centerf px-4 text-center">
           <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide uppercase leading-tight">
             <span className="text-gray-50 opacity-90">MINSUPALA IRDC</span>{" "}
-            <span className="text-blue-400 opacity-90">Highlights</span>
+            <span className="text-blue-400 opacity-90">Projects</span>
           </h3>
           <p className="mt-4 text-lg text-gray-300 opacity-80 max-w-2xl mx-auto">
             Discover the key achievements and impactful projects
-            <br className="sm:hidden" /> that define our commitment to the
+            <br/> that define our commitment to the
             region.
           </p>
         </div>
