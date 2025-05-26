@@ -122,7 +122,7 @@ function CreateEventList() {
   return (
     <section
       id="home-updates"
-      className="w-full py-40 bg-gradient-to-br from-gray-0 to-gray-100 "
+      className="w-full py-30 bg-gradient-to-br from-gray-0 to-gray-100 "
     >
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-16">
@@ -216,7 +216,7 @@ function CreateConsortiumMemberSection() {
   return (
     <section
       id="home-members"
-      className="w-full min-h-[66.66667vh] flex items-center justify-center bg-gray-50 py-40"
+      className="w-full min-h-[66.66667vh] flex items-center justify-center bg-gray-50 py-30"
     >
       <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center">
         {/* 
@@ -297,7 +297,7 @@ function CreateConsortiumMemberSection() {
 function CreateHighlightsProject1() {
   return (
     <section
-      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-40 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-30 px-4 sm:px-6 lg:px-8"
       
     >
       <div className="max-w-3xl w-full mx-auto text-center">
@@ -475,7 +475,7 @@ function CreateHighlightsProject2() {
   return (
     <section
       id="highlights"
-      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-40 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-30 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-3xl w-full mx-auto text-center">
         <h1 className="text-2xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8 px-5 md:px-0">
@@ -578,7 +578,7 @@ function CreateHeadQuarterSection() {
   return (
     <section
       id="map-location"
-      className="w-full bg-white py-40 flex flex-col items-center justify-center relative overflow-hidden"
+      className="w-full bg-white py-30 flex flex-col items-center justify-center relative overflow-hidden"
     >
       {/* Decorative Background Element */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-70"></div>
