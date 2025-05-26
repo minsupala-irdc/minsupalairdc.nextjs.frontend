@@ -132,7 +132,7 @@ function CreateEventList() {
             <span className="text-blue-800">Upcoming</span> Events & Activities
           </h2>
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-gray-600 max-w-5  xl mx-auto text-center px-5 md:px-0">
+          <p className="md:text-lg text-xl text-gray-600 max-w-5xl mx-auto text-center px-5 md:px-0">
             Stay informed about our latest conferences, workshops, and community engagement initiatives.
           </p>
         </div>
