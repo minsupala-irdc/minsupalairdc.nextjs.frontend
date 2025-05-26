@@ -122,19 +122,18 @@ function CreateEventList() {
   return (
     <section
       id="home-updates"
-      className="w-full py-30 bg-gradient-to-br from-gray-0 to-gray-100 "
+      className="w-full py-10 md:py-30 bg-gradient-to-br from-gray-0 to-gray-100 "
     >
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-16">
           {" "}
           {/* Increased bottom margin for better spacing */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight px-5 md:px-0">
             <span className="text-blue-800">Upcoming</span> Events & Activities
           </h2>
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay informed about our latest conferences, workshops, and <br />
-            community engagement initiatives.
+          <p className="text-lg sm:text-xl text-gray-600 max-w-5  xl mx-auto text-center px-5 md:px-0">
+            Stay informed about our latest conferences, workshops, and community engagement initiatives.
           </p>
         </div>
 
@@ -217,7 +216,7 @@ function CreateConsortiumMemberSection() {
   return (
     <section
       id="home-members"
-      className="w-full min-h-[66.66667vh] flex items-center justify-center bg-gray-50 py-30"
+      className="w-full min-h-[66.66667vh] flex items-center justify-center bg-gray-50 py-10 md:py-30"
     >
       <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center">
         {/* 
@@ -241,7 +240,17 @@ function CreateConsortiumMemberSection() {
           </span>
         </h2>
 
-        <p className="mt-4 mb-20 text-lg text-gray-600 text-center">
+        
+          {/* <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto text-center px-5 md:px-0"></p>
+          
+          
+          
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto text-center px-5 md:px-0">
+          
+          */}
+
+
+        <p className="mt-4 mb-20 text-lg text-gray-600 text-center ">
           Driving sustainable development through collaborative research and
           development.
         </p>
@@ -288,21 +297,21 @@ function CreateConsortiumMemberSection() {
 function CreateHighlightsProject1() {
   return (
     <section
-      id="home-highlights"
-      className="w-full bg-white min-h-[66.66667vh] flex flex-col items-center justify-center py-50"
+      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-20 px-4 sm:px-6 lg:px-8"
+      
     >
-      <div className="max-w-6xl w-full mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8">
+      <div className="max-w-3xl w-full mx-auto text-center">
+        <h1 className="text-2xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8 px-5 md:px-0">
+          
           Assessment and Characterization of Water Quality, Inland Capture
           Fisheries, Watershed, and Socioeconomic of Important Water Bodies{" "}
-          <br />
           <span className="text-blue-600">
             for Social and Economic Transformation
           </span>
         </h1>
 
-        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10">
-          The project aims to provide a comfprehensive assessment and
+        <p className="text-justify text-lg sm:text-xl text-gray-700 leading-relaxed mb-10 px-5 md:px-0">
+          The project aims to provide a comprehensive assessment and
           characterization of the important water bodies in Central Mindanao to
           gather scientific data and information. This management practice is
           for the sustainable development and transformation of the region. The
@@ -379,11 +388,11 @@ function CreateHighlightsProject1() {
         </div>
 
         <div className="mt-16 py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <h3 className="text-3xl sm:text-3xl font-extrabold text-gray-800 mb-12 text-center leading-tight">
+          <h3 className="md:text-3xl text-2xl font-extrabold text-gray-800 mb-12 text-center leading-tight">
             Focus <span className="text-blue-700">Areas</span>
           </h3>
           <div className="max-w-3xl mx-auto">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 text-xl text-gray-700">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8  text-base md:text-xl text-gray-700">
               <li className="flex items-center">
                 <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
                 <span className="font-semibold">Water Quality Assessment</span>
@@ -410,18 +419,18 @@ function CreateHighlightsProject1() {
           Target{" "}
           <span className="text-blue-700">Sustainable Development Goals</span>
         </h3>
-        <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto text-center">
+        <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto text-center ">
           The Phase 1 project of MINSUPALA-IRDC is directly aligned with and
-          contributes to the realization of the following Sustainable
-          Development Goals.
+          contributes to the realization of the following SDGs.
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 mt-6 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:flex-wrap lg:gap-0 lg:mt-10 max-w-6xl w-full mx-auto justify-center">
+
+      <div className="flex flex-wrap justify-center mt-6 max-w-6xl w-full mx-auto md:flex-nowrap">
         {sdgLogos.map((logo) => (
           <div
             key={logo.label}
-            className="flex items-center justify-center relative"
+            className="flex items-center justify-center relative" // Removed width classes to allow natural sizing without gaps
           >
             <Image
               src={logo.src}
@@ -434,14 +443,15 @@ function CreateHighlightsProject1() {
         ))}
       </div>
 
-      <div className="mt-20 px-4 sm:px-6 lg:px-8 text-center  py-16 rounded-xl">
+
+      <div className="mt-20 px-4 sm:px-6 lg:px-8 text-center py-16 rounded-xl w-max-3xl">
         {" "}
         {/* Added padding, background, shadow, and rounded corners */}
         <h3 className="text-3xl mb-10 sm:text-3xl font-extrabold text-gray-800 text-center leading-tight">
           Target{" "}
           <span className="text-blue-700">Resources and Materials</span>
         </h3>
-        <p className="text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto">
+        <p className="md:text-lg text-xl text-gray-700 max-w-3xl mx-auto ">
           Explore our comprehensive research output, detailed findings, and
           valuable resources. Dive into the papers, reports, and data that
           present our impactful work and contributions to the region.
@@ -465,22 +475,30 @@ function CreateHighlightsProject2() {
   return (
     <section
       id="highlights"
-      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-20 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-gray-50 min-h-[66.66667vh] flex flex-col items-center justify-center py-10 md:py-20 px-4 sm:px-6 lg:px-8"
     >
-      <div className="max-w-5xl w-full mx-auto text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8">
-          Establishment of Indigenous Crop and Fish Research and Preservation{" "}
-          <span className="text-blue-600">Center</span>
+      <div className="max-w-3xl w-full mx-auto text-center">
+        <h1 className="text-2xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8 px-5 md:px-0">
+          Establishment and Preservation of Indigenous Fish and Crop Products
         </h1>
 
-        <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10">
+        {/* <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10  px-3 md:px-0">
           The Indigenous Crops and Fish Research and Preservation Center aims to
           **conserve and promote indigenous crops and fish species unique to the
           region**. This project aims to develop indigenous products while
           preserving traditional knowledge, biodiversity, and cultural heritage
           associated with these agricultural produce, while also creating market
           opportunities for local farmers.
-        </p>
+        </p> */}
+
+<p className="text-justify text-lg sm:text-xl text-gray-700 leading-relaxed mb-10 px-5 md:px-0">
+  The Indigenous Crops and Fish Research and Preservation Center aims to
+  <span className="text-blue-700 text-bold"> conserve and promote indigenous crops and fish species unique to the
+  region</span>. This project aims to develop indigenous products while
+  preserving traditional knowledge, biodiversity, and cultural heritage
+  associated with these agricultural produce, while also creating market
+  opportunities for local farmers.
+</p>
 
         <div className="flex flex-col items-center justify-center text-gray-700 font-semibold text-lg mb-10">
           {/* Project Cost (aligned to the left within its own space) */}
@@ -560,7 +578,7 @@ function CreateHeadQuarterSection() {
   return (
     <section
       id="map-location"
-      className="w-full bg-white py-16 sm:py-24 flex flex-col items-center justify-center relative overflow-hidden"
+      className="w-full bg-white py-10 md:py-30 flex flex-col items-center justify-center relative overflow-hidden"
     >
       {/* Decorative Background Element */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-70"></div>
@@ -668,7 +686,7 @@ function CreateMinsupalaIRDCHighlights() {
 
   return (
     <>
-      <div className="w-full bg-neutral-900 py-10 sm:py-12 mt-16 relative overflow-hidden">
+      <div id="home-project" className="w-full bg-neutral-900 py-10 sm:py-12 mt-16 relative overflow-hidden">
         {/* Subtle Geometric Dot Pattern Overlay (more integrated) */}
         <div
           className="absolute inset-0 z-0 opacity-10" // Reduced opacity slightly for more subtlety
@@ -686,8 +704,7 @@ function CreateMinsupalaIRDCHighlights() {
             <span className="text-blue-400 opacity-90">Projects</span>
           </h3>
           <p className="mt-4 text-lg text-gray-300 opacity-80 max-w-2xl mx-auto">
-            Discover the key achievements and impactful projects
-            <br/> that define our commitment to the
+            Discover the key achievements and impactful projects that define our commitment to the
             region.
           </p>
         </div>

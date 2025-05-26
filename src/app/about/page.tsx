@@ -120,15 +120,9 @@ const timelineEvents: TimelineEvent[] = [
     imageUrl: '/assets/resources/irdc-timeline/july-21-2023.jpg'
   },
   {
-    date: 'January 30, 2024',
-    title: 'MINSUPALA-IRDC organized its first consortium meeting',
-    description: "The meeting reaffirmed the initial agreement and discussed implementation strategies for the approved 45-million-peso research project titled 'Assessment and Characterization of Water Quality, Inland Capture Fisheries, Watershed, and Socio-Economic Aspects of Important Water Bodies for Social and Economic Transformation.' This project, a priority under the consortium’s Research and Development agenda, aims to optimize the use of Central Mindanao’s abundant natural water resources.",
-    imageUrl: '/assets/resources/irdc-timeline/january-30-2024.jpg'
-  },
-  {
     // This event is now marked as 'in-progress' in its 'others' property
     date: 'January 1, 2024', // Based on current date (May 2025), this is ongoing
-    title: 'MINSUPALA IRDC Phase 1 Project: Assessment and Characterization of Water Quality. Inland Capture Fisheries, Watershed, and Socioeconomic of important Water Bodies for Social and Economic Transformation in Central Mindanao',
+    title:   'MINSUPALA IRDC Phase 1 Project: Assessment and Characterization of Water Quality. Inland Capture Fisheries, Watershed, and Socioeconomic of important Water Bodies for Social and Economic Transformation in Central Mindanao',
     description: 'The project aims to provide a comprehensive assessment and characterization of the important water bodies in Central Mindanao to gather scientific data and information. This management practice is for the sustainable development and transformation of the region. The project recognizes the intrinsic linkages between water quality, inland capture fisheries, watershed health, and socio-economic conditions, emphasizing the need to address these aspects holistically.',
     imageUrl: '/assets/resources/phase1-books/status-report-on-water-quality-inland-capture-fisheries-watersheds-and-socio-economic-conditions-of-important-water-bodies-in-central-mindanao.png',
     others: {
@@ -136,6 +130,11 @@ const timelineEvents: TimelineEvent[] = [
       cost: '45,000,000.00',
       status: 'Done',
     }
+  },{
+    date: 'January 30, 2024',
+    title: 'MINSUPALA-IRDC organized its first consortium meeting',
+    description: "The meeting reaffirmed the initial agreement and discussed implementation strategies for the approved 45-million-peso research project titled 'Assessment and Characterization of Water Quality, Inland Capture Fisheries, Watershed, and Socio-Economic Aspects of Important Water Bodies for Social and Economic Transformation.' This project, a priority under the consortium’s Research and Development agenda, aims to optimize the use of Central Mindanao’s abundant natural water resources.",
+    imageUrl: '/assets/resources/irdc-timeline/january-30-2024.jpg'
   },
   {
     date: 'November 13, 2024',
@@ -145,8 +144,8 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     date: 'January 1, 2025', // This event is in the future
-    title: 'MINSUPALA IRDC Phase 2 Project: Establishment of Indigenous Crop and Fish Research and Preservation Center',
-    description: 'The Indigenous Crops and Fish Research and Preservation Center aims to conserve and promote indigenous crops and fish species unique to the region. This project aims to develop indigenous products while preserving traditional knowledge, biodiversity, and cultural heritage associated with these agricultural produce, while also creating market opportunities for local farmers .',
+    title: 'MINSUPALA IRDC Phase 2 Project: Establishment and Preservation of Indigenous Fish and Crop Products',
+    description: 'The project aims to conserve and promote indigenous crops and fish species unique to the region. This project aims to develop indigenous products while preserving traditional knowledge, biodiversity, and cultural heritage associated with these agricultural produce, while also creating market opportunities for local farmers .',
     imageUrl: '',
     others: {
       duration: '12 Months',
@@ -160,7 +159,7 @@ const timelineEvents: TimelineEvent[] = [
 
 const CreateTimeline: React.FC = () => {
   return (
-    <section className="w-full py-16 bg-gray-50">
+    <section className="w-full py-16 bg-gray-50 ">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight sm:text-5xl">
@@ -170,12 +169,12 @@ const CreateTimeline: React.FC = () => {
             Uniting SUCs for a Better Mindanao, Sulu, and Palawan
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-            The Mindanao Sulu Palawan – Innovative Research and Development Consortium (MinSuPala-IRDC) is a compelling example of what happens when universities and colleges come together with a shared purpose, addressing regional challenges through collaborative research and development efforts.
+            The Mindanao Sulu Palawan – Innovative Research and Development Consortium (MinSuPala-IRDC) came together with a shared purpose, addressing regional challenges through collaborative research and development efforts.
           </p>
         </div>
 
         {/* Timeline Container */}
-        <div className="relative wrap overflow-hidden p-10 h-full">
+        <div className="relative wrap overflow-hidden p-0 md:p-10 h-full">
           {/* Vertical Line - Hidden on mobile, block on md and up */}
           <div className="border-2 absolute border-opacity-20 border-blue-700 h-full border left-1/2 transform -translate-x-1/2 hidden md:block"></div>
 
@@ -193,7 +192,7 @@ const CreateTimeline: React.FC = () => {
               <div key={index} className={`mb-1 flex flex-col md:flex-row justify-between items-center w-full ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
 
                 {/* Content Card (Order first on mobile, then alternating) */}
-                <div className={`order-2 md:order-1 bg-white rounded-lg shadow-lg w-full md:w-5/12 px-6 py-4 transition-all duration-300 ease-in-out mb-4 md:mb-${MARGIN_CARD_IMAGE_TIMELINE} ${cardOpacityClass} ${cardHoverClass}`}>
+                <div className={`order-2 md:order-1 bg-white rounded-lg md:shadow-lg w-full md:w-5/12 px-6 py-4 transition-all duration-300 ease-in-out mb-4 md:mb-${MARGIN_CARD_IMAGE_TIMELINE} ${cardOpacityClass} ${cardHoverClass}`}>
                   <h3 className="mb-2 font-bold text-gray-800 text-lg flex items-center">
                     {event.date}
                     {isInProgress && event.others?.status === 'In-progress' && (
@@ -204,7 +203,7 @@ const CreateTimeline: React.FC = () => {
                     )}
                   </h3>
                   <h4 className="mb-2 font-semibold text-blue-700 text-xl">{event.title}</h4>
-                  <p className="text-sm leading-snug tracking-wide text-gray-700 text-opacity-100">{event.description}</p>
+                  <p className="text-sm leading-snug tracking-wide text-gray-700 text-opacity-100 text-justify">{event.description}</p>
 
                   {/* Use the nested TimelineEventDetails component */}
                   {event.others && (

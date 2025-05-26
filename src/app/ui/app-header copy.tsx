@@ -23,9 +23,9 @@ export function AppHeader() {
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/#home-updates" scroll={true} className="block px-4 py-2">Updates</Link>
-              <Link href="/#home-project" scroll={true} className="block px-4 py-2">Projects</Link>
+              <Link href="/#home-highlights" scroll={true} className="block px-4 py-2">Highlights</Link>
               <Link href="/#home-members" scroll={true} className="block px-4 py-2">Members</Link>
-              <Link href="/about" className="block px-4 py-2">About</Link>
+              <Link href="/about" className="text-lg">About</Link>
             </div>
 
             {/* Mobile hamburger button */}
@@ -59,7 +59,7 @@ export function AppHeader() {
           <div className="space-y-4 mt-10">
             <Link href="/" className="block px-4 py-2" onClick={handleLinkClick}>Home</Link>
             <a href="/#home-updates" className="block px-4 py-2" onClick={handleLinkClick}>Updates</a>
-            <a href="/#home-projects" className="block px-4 py-2" onClick={handleLinkClick}>Projects</a>
+            <a href="/#home-highlights" className="block px-4 py-2" onClick={handleLinkClick}>Highlights</a>
             <a href="/#home-members" className="block px-4 py-2" onClick={handleLinkClick}>Members</a>
             <Link href="/about" className="block px-4 py-2" onClick={handleLinkClick}>About</Link>
           </div>
