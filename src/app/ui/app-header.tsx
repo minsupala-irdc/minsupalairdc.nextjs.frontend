@@ -23,7 +23,7 @@ export function AppHeader() {
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/#home-updates" scroll={true} className="block px-4 py-2">Updates</Link>
-              <Link href="/#home-project" scroll={true} className="block px-4 py-2">Projects</Link>
+              <Link href="/#home-projects" scroll={true} className="block px-4 py-2">Projects</Link>
               <Link href="/#home-members" scroll={true} className="block px-4 py-2">Members</Link>
               <Link href="/about" className="block px-4 py-2">About</Link>
             </div>
