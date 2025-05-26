@@ -686,7 +686,7 @@ function CreateMinsupalaIRDCHighlights() {
 
   return (
     <>
-      <div id="home-projects" className="w-full bg-neutral-900 py-50 relative overflow-hidden">
+      <div id="home-projects" className="w-full bg-neutral-900 py-30 mt-20 md:mt-0 relative overflow-hidden">
         {/* Subtle Geometric Dot Pattern Overlay (more integrated) */}
         <div
           className="absolute inset-0 z-0 opacity-10" // Reduced opacity slightly for more subtlety
