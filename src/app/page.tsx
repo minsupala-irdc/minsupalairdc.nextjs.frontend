@@ -304,9 +304,9 @@ function CreateHighlightsProject1() {
         <h1 className="text-2xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8 px-5 md:px-0">
           
           Assessment and Characterization of Water Quality, Inland Capture
-          Fisheries, Watershed, and Socioeconomic of Important Water Bodies{" "}
+          Fisheries, Watershed, and Socioeconomic of Important Water Bodies{" "} 
           <span className="text-blue-600">
-            for Social and Economic Transformation
+            for Social and Economic Transformation in Central Mindanao
           </span>
         </h1>
 
