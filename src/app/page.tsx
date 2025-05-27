@@ -448,7 +448,6 @@ function CreateHighlightsProject1() {
         {" "}
         {/* Added padding, background, shadow, and rounded corners */}
         <h3 className="text-3xl mb-10 sm:text-3xl font-extrabold text-gray-800 text-center leading-tight">
-          Target{" "}
           <span className="text-blue-700">Resources and Materials</span>
         </h3>
         <p className="md:text-lg text-xl text-gray-700 max-w-3xl mx-auto ">
