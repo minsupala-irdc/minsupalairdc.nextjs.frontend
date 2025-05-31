@@ -63,7 +63,7 @@ const universities = [
     url: "https://amsc-edu.net/",
   },
 
-  // { src: "/assets/resources/irdc-members/basilan-state-college.png", label: "Basilan State University", url: "https://bassc.edu.ph/basc/" },
+  { src: "/assets/resources/irdc-members/basilan-state-college.png", label: "Basilan State College", url: "https://bassc.edu.ph/basc/" },
   {
     src: "/assets/resources/irdc-members/cotabato-foundation-college-of-science-and-technology.png",
     label: "Cotabato Foundation College of Science and Technology",
@@ -74,7 +74,7 @@ const universities = [
     label: "Cotabato State University",
     url: "http://www.cotsu.edu.ph/",
   },
-  // { src: "/assets/resources/irdc-members/msu-buug.png", label: "Mindanao State University – Buug", url: "https://msubuug.edu.ph/" },
+  { src: "/assets/resources/irdc-members/msu-buug.png", label: "Mindanao State University – Buug", url: "https://msubuug.edu.ph/" },
   {
     src: "/assets/resources/irdc-members/msu-maguindanao.png",
     label: "Mindanao State University - Maguindanao",
@@ -86,8 +86,8 @@ const universities = [
     url: "https://msugensan.edu.ph/",
   },
 
-  // { src: "/assets/resources/irdc-members/msu-sulu.png", label: "Mindanao State University – Sulu", url: "https://msusulu.edu.ph/" },
-  // { src: "/assets/resources/irdc-members/msu-tcto.png", label: "Mindanao State University – Tawi-tawi College of Technology and Oceanography", url: "https://msutawi-tawi.edu.ph/" },
+  { src: "/assets/resources/irdc-members/msu-sulu.png", label: "Mindanao State University – Sulu", url: "https://msusulu.edu.ph/" },
+  { src: "/assets/resources/irdc-members/msu-tcto.png", label: "Mindanao State University – Tawi-tawi College of Technology and Oceanography", url: "https://msutawi-tawi.edu.ph/" },
   {
     src: "/assets/resources/irdc-members/south-cotabato-state-college.png",
     label: "South Cotabato State College",
@@ -98,8 +98,8 @@ const universities = [
     label: "Sultan Kudarat State University",
     url: "https://sksu.edu.ph/",
   },
-  // { src: "/assets/resources/irdc-members/sulu-state-college.png", label: "Sulu State College", url: "https://sulustatecollege.edu.ph/" },
-  // { src: "/assets/resources/irdc-members/tawi-tawi-agricultural-state-college.png", label: "Tawi-tawi Regional Agricultural College", url: "https://trac.edu.ph/" },
+  { src: "/assets/resources/irdc-members/sulu-state-college.png", label: "Sulu State College", url: "https://sulustatecollege.edu.ph/" },
+  { src: "/assets/resources/irdc-members/tawi-tawi-agricultural-state-college.png", label: "Tawi-tawi Regional Agricultural College", url: "https://trac.edu.ph/" },
   {
     src: "/assets/resources/irdc-members/usm-kabacan.png",
     label: "University of Southern Mindanao - Kabacan",
