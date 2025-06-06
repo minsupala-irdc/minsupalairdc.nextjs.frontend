@@ -87,7 +87,7 @@ const universities = [
   },
 
   { src: "/assets/resources/irdc-members/msu-sulu.png", label: "Mindanao State University – Sulu", url: "https://msusulu.edu.ph/" },
-  { src: "/assets/resources/irdc-members/msu-tcto.png", label: "Mindanao State University – Tawi-tawi College of Technology and Oceanography", url: "https://msutawi-tawi.edu.ph/" },
+  { src: "/assets/resources/irdc-members/msu-tcto.png", label: "Mindanao State University – Tawi-Tawi College of Technology and Oceanography", url: "https://msutawi-tawi.edu.ph/" },
   {
     src: "/assets/resources/irdc-members/south-cotabato-state-college.png",
     label: "South Cotabato State College",
