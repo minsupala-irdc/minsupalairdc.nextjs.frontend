@@ -129,7 +129,7 @@ function CreateEventList() {
           {" "}
           {/* Increased bottom margin for better spacing */}
           <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight px-5 md:px-0">
-            <span className="text-blue-800">Upcoming</span> Events & Activities
+            <span className="text-blue-800">Recent</span> Events & Activities
           </h2>
           {/* Subtitle */}
           <p className="md:text-lg text-xl text-gray-600 max-w-5xl mx-auto text-center px-5 md:px-0">
@@ -235,7 +235,7 @@ function CreateConsortiumMemberSection() {
           {/* <span className="text-blue-800">Upcoming</span> Events & Activities */}
           Mindanao Sulu Palawan{" "}
           <span className="text-blue-800">
-            Innovative Research <br />
+            Innovative Research &<br />
             Development Consortium
           </span>
         </h2>
