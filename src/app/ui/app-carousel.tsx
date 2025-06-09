@@ -56,12 +56,7 @@ const images: Slide[] = [
     date: "March 8, 2025",
   },
   {
-    src: "/assets/resources/irdc-timeline/march-19-2025-1.jpg",
-    title: "Minsupala IRDC Manuscript Writing Writeshop",
-    date: "March 29, 2025",
-  },
-  {
-    src: "/assets/resources/irdc-timeline/march-19-2025-2.jpg",
+    src: "/assets/resources/irdc-timeline/march-19-2025-1-2-Technical-Writing-workshop.jpg",
     title: "Minsupala IRDC Manuscript Writing Writeshop",
     date: "March 29, 2025",
   },
@@ -95,7 +90,9 @@ export function AppCarousel() {
   };
 
   return (
-    <div className="relative w-full mx-auto max-w-6xl overflow-hidden h-[250px] md:h-[500px] mt-5 mb-5">
+    // original: width is max-w-6xl and md:h-500px
+    // <div className="relative w-full mx-auto max-w-6xl overflow-hidden h-[250px] md:h-[500px] ">
+    <div className="relative w-full mx-auto overflow-hidden h-[250px] md:h-[75vh] ">
       <div
         className="flex transition-transform duration-700 ease-in-out h-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -103,7 +100,7 @@ export function AppCarousel() {
         {images.map((image, index) => (
           <div
             key={index}
-            className="min-w-full flex-shrink-0 relative h-[250px] sm:h-[300px] md:h-[500px]"
+            className="min-w-full flex-shrink-0 relative h-[250px] sm:h-[300px] md:h-[75vh]"
           >
             <Image
               src={image.src}
@@ -112,6 +109,8 @@ export function AppCarousel() {
               objectFit="cover"
               priority={index === 0}
             />
+            
+            
             <div className="absolute bottom-0 left-0 right-0 z-10 bg-[rgba(0,0,0,0.8)] text-white text-xs md:text-sm pt-1 pb-4 md:pt-2 md:pb-10">
               <div className="max-w-6xl mx-auto px-2 md:px-4 text-center text-sm md:text-xl">
                 {image.title}
