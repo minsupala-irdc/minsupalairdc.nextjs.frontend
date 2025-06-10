@@ -4,6 +4,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from "next/image";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 export function AppHeader() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -16,25 +19,25 @@ export function AppHeader() {
     // <header className="sticky top-0 z-50 bg-gray-100 shadow">
     <header className="sticky top-0 z-50 bg-gray-100 ">
       <nav className="w-full py-5">
-        <div className="flex items-center justify-between max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800  font-bold">
           {/* Left: Logo */}
-        <div className="flex items-center space-x-2">
-  <Image
-    src="/assets/resources/logo-irdc-lightbulb.png"
-    alt="MINSUPALA Innovative Research and Development Consortium"
-    // Remove 'fill' when you want the image to have specific dimensions next to other elements.
-    // Instead, define 'width' and 'height' or use Tailwind's sizing classes.
-    width={40} // Adjust this value as needed for your logo's desired width
-    height={40} // Adjust this value as needed for your logo's desired height
-    className="object-contain"
-    // The 'sizes' prop is still useful for Next.js image optimization
-    // as it helps Next.js serve the most appropriate image resolution.
-    sizes="(max-width: 768px) 100px, 150px"
-  />
-  <Link href="/" className="text-lg font-bold">
-    Minsupala IRDC
-  </Link>
-</div>
+          <div className="flex items-center space-x-2">
+            <Image
+              src="/assets/resources/logo-irdc-lightbulb.png"
+              alt="MINSUPALA Innovative Research and Development Consortium"
+              // Remove 'fill' when you want the image to have specific dimensions next to other elements.
+              // Instead, define 'width' and 'height' or use Tailwind's sizing classes.
+              width={40} // Adjust this value as needed for your logo's desired width
+              height={40} // Adjust this value as needed for your logo's desired height
+              className="object-contain"
+              // The 'sizes' prop is still useful for Next.js image optimization
+              // as it helps Next.js serve the most appropriate image resolution.
+              sizes="(max-width: 768px) 100px, 150px"
+            />
+            <Link href="/" className="text-lg" >
+              Minsupala IRDC
+            </Link>
+          </div>
 
           {/* Right: Nav links and mobile menu */}
           <div className="flex items-center space-x-4">
@@ -42,8 +45,14 @@ export function AppHeader() {
               <Link
                 href="/#home-updates"
                 scroll={true}
-                className="block px-4 py-2"
+                className="block px-4 py-2 "
               >
+                
+                <FontAwesomeIcon
+                  icon={faBell}
+                  className="w-9 h-auto text-gray-800"
+                />
+
                 Updates
               </Link>
               <Link
