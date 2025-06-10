@@ -40,8 +40,25 @@ const montserrat = Montserrat({
 // --- Metadata for the <head> section ---
 // In the App Router, you set the page title and other meta tags using this `metadata` export.
 export const metadata: Metadata = {
-  title: "MINSUPALA IRDC", // This correctly sets the <title> tag for your application
+  title: "IRDC", // This correctly sets the <title> tag for your application
   description: "Research and Development Center for MINSUPALA", // Add a relevant description
+  icons: {
+    icon: [
+      {
+        url: '/favicon_irdc/favicon.ico', // Relative path to your favicon in /public
+      },
+      {
+        url: '/favicon_irdc/favicon-32x32.png',    // For modern browsers
+        type: 'image/png',
+      },
+    ],
+    apple: [
+      {
+        url: '/favicon_irdc/apple-touch-icon.png', // For iOS devices
+        type: 'image/png',
+      },
+    ],
+  }, 
 };
 
 // --- Root Layout Component ---
