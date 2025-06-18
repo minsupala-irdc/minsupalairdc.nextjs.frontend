@@ -33,7 +33,7 @@ const articles = [
     img: "/assets/resources/irdc-timeline/june-18-2025-policy-brief-writeshop.jpg",
     place: "Function Room Alma, Oroderm City Functions and Events Place",
     location: "Davao City",
-    link_facebook: "https://www.facebook.com/permalink.php?story_fbid=pfbid02h5nn7qG2oCLq9GovbLDL1n5YEkQ7ZArj4Pzmp7St3a5u4tGSKJvM49BYafvHmRWjl&amp;id=61576379536301",
+    link_facebook: "https://www.facebook.com/permalink.php?story_fbid=pfbid02h5nn7qG2oCLq9GovbLDL1n5YEkQ7ZArj4Pzmp7St3a5u4tGSKJvM49BYafvHmRWjl&id=61576379536301",
     author: "",
   },
   {
