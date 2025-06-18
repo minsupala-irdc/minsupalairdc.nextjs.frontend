@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const UNIVERSITIES = [
+const universities = [
     {
         src: "/assets/resources/irdc-members/adiong-memorial-state-college.png",
         label: "Adiong Memorial State College",
@@ -71,12 +71,12 @@ export default function ConsortiumMemberSection() {
             <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center">
 
 
-                <p className="text-3xl text-center font-montserrat"></p>
+                <p className="text-3xl  text-center font-montserrat"></p>
 
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight text-center">
                     {/* <span className="text-blue-800">Upcoming</span> Events & Activities */}
                     Mindanao Sulu Palawan{" "}
-                    <span className="text-red-700">
+                    <span className="text-blue-800">
                         Innovative Research &<br />
                         Development Consortium
                     </span>
@@ -89,10 +89,10 @@ export default function ConsortiumMemberSection() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                    {UNIVERSITIES.map((university, index) => {
+                    {universities.map((university, index) => {
                         const isLastOdd =
-                            UNIVERSITIES.length % 3 === 1 &&
-                            index === UNIVERSITIES.length - 1;
+                            universities.length % 3 === 1 &&
+                            index === universities.length - 1;
 
                         return (
                             <a

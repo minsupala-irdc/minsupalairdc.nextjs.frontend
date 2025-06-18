@@ -17,18 +17,9 @@ export function AppHeader() {
 
   return (
     // <header className="sticky top-0 z-50 bg-gray-100 shadow">
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      {/* <div className="w-full mx-auto bg-gradient-to-r from-red-800 to-red-600"> */}
-      <div className="w-full mx-auto bg-black">
-        <p className="text-xs p-1 max-w-6xl mx-auto text-white/60 px-3 text-left">
-          Mindanao Sulu Palawan - Innovative Research and Development Consortium
-        </p>
-      </div>
-
-
-
-      <nav className="w-full py-3">
-        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800 font-bold">
+    <header className="sticky top-0 z-50 bg-gray-100 ">
+      <nav className="w-full py-5">
+        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800  font-bold">
           {/* Left: Logo */}
           <div className="flex items-center space-x-2">
             <Image
@@ -36,8 +27,8 @@ export function AppHeader() {
               alt="MINSUPALA Innovative Research and Development Consortium"
               // Remove 'fill' when you want the image to have specific dimensions next to other elements.
               // Instead, define 'width' and 'height' or use Tailwind's sizing classes.
-              width={50} // Adjust this value as needed for your logo's desired width
-              height={50} // Adjust this value as needed for your logo's desired height
+              width={40} // Adjust this value as needed for your logo's desired width
+              height={40} // Adjust this value as needed for your logo's desired height
               className="object-contain"
               // The 'sizes' prop is still useful for Next.js image optimization
               // as it helps Next.js serve the most appropriate image resolution.
@@ -52,21 +43,27 @@ export function AppHeader() {
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4">
               <Link
-                href="/#news"
+                href="/#home-updates"
                 scroll={true}
                 className="block px-4 py-2 "
               >
-                News and Updates
+                
+                <FontAwesomeIcon
+                  icon={faBell}
+                  className="w-9 h-auto text-gray-800"
+                />
+
+                Updates
               </Link>
               <Link
-                href="/projects"
+                href="/#home-projects"
                 scroll={true}
                 className="block px-4 py-2"
               >
                 Projects
               </Link>
               <Link
-                href="/members"
+                href="/#home-members"
                 scroll={true}
                 className="block px-4 py-2"
               >

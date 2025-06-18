@@ -105,10 +105,8 @@ export function AppCarousel() {
             <Image
               src={image.src}
               alt={image.title}
-              fill
-              // objectFit="cover"
-
-              style={{ objectFit: 'cover' }}
+              layout="fill"
+              objectFit="cover"
               priority={index === 0}
             />
             

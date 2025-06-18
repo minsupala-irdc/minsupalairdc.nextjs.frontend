@@ -13,10 +13,11 @@ export default function HeadquartersSection() {
             {/* Decorative Background Element */}
             <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white opacity-70"></div>
 
-            <div className="relative z-10 max-w-7xl  sm:text-4xl lg:text-5xl  w-full mx-auto text-center px-4 sm:px-6 lg:px-8">
 
+
+            <div className="relative z-10 max-w-7xl  sm:text-4xl lg:text-5xl  w-full mx-auto text-center px-4 sm:px-6 lg:px-8">
                 <p className="text-3xl  font-extrabold text-gray-800 leading-tight mb-6 drop-shadow-sm font-montserrat">
-                    MINSUPALA-IRDC <span className="text-red-600">Headquarters</span>
+                    MINSUPALA-IRDC <span className="text-blue-600">Headquarters</span>
                 </p>
 
                 <p className="mb-10 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">

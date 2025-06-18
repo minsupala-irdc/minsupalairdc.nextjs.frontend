@@ -20,7 +20,7 @@ const logos = [
 
 export function AppFooter() {
   return (
-    <footer className="w-full pt-10 pb-20 bg-white">
+    <footer className="w-full pt-10 pb-20 bg-gray-100">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 px-4">
         {/* Address */}
         <ul className="flex flex-col">
@@ -32,9 +32,9 @@ export function AppFooter() {
         </ul>
 
         {/* Contacts and Web Team */}
-        <ul className="">
+        <ul className="flex-1">
           <li>
-            <ul id="contact-section">
+            <ul>
               <li className="font-extrabold">Contacts</li>
               <li className="text-gray-500">
                 minsupala-irdc@msumaguindanao.edu.ph
@@ -50,13 +50,37 @@ export function AppFooter() {
               <li className="text-gray-500">minsupala.irdc.itsupport@msumaguindanao.edu.ph</li>
             </ul>
           </li>
-          
+          <li className="mt-6">
+            <ul>
+              <li className="font-extrabold"> Social media</li>
+              <li className="mt-1">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61576379536301"
+                target="_blank" // This is the correct usage for opening in a new tab
+                rel="noopener noreferrer" // Good practice for security with target="_blank"
+                className="text-lg font-bold"
+              >
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="w-9 h-auto text-gray-800"
+                />
+                
+              </Link>
+
+              <Link href={""}>
+                <FontAwesomeIcon
+                  icon={faGoogle}
+                  className="w-9 h-auto text-gray-800"
+                />
+              </Link>
+              </li>
+            </ul>
+          </li>
         </ul>
 
-        
         {/* About */}
         <ul className="flex flex-col">
-          <li className="font-extrabold">About Minsupala-IRDC</li>
+          <li className="font-extrabold">About</li>
           <li><Link href="/about"> History</Link></li>
           <li><Link
                 href="/#home-members"
@@ -66,30 +90,6 @@ export function AppFooter() {
                 Members
               </Link></li>
         </ul>
-
-        <ul className="flex flex-col">
-          <li className="">
-            <ul>
-              <li className="font-extrabold"> Social media</li>
-              <li className="mt-1">
-              <Link
-                href="https://www.facebook.com/profile.php?id=61576379536301"
-                target="_blank" // This is the correct usage for opening in a new tab
-                rel="noopener noreferrer" // Good practice for security with target="_blank"
-                className=""
-              >Facebook Page
-                {/* <FontAwesomeIcon
-                  icon={faFacebook}
-                  className="w-9 h-auto text-gray-800"
-                />  */}
-                
-              </Link>
-
-              </li>
-            </ul>
-          </li>
-        </ul>
-
 
         {/* Resources */}
         {/* <ul className="flex-1">

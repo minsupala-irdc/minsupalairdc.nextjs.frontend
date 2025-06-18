@@ -52,7 +52,7 @@ export default function Project1Highlights() {
 
                     Assessment and Characterization of Water Quality, Inland Capture
                     Fisheries, Watershed, and Socioeconomic of Important Water Bodies{" "}
-                    <span className="text-red-600">
+                    <span className="text-blue-600">
                         for Social and Economic Transformation in Central Mindanao
                     </span>
                 </h1>
@@ -89,7 +89,7 @@ export default function Project1Highlights() {
                         </svg>
                         <span>
                             Project Cost:{" "}
-                            <span className="font-bold text-red-600">45,000,000 PhP</span>
+                            <span className="font-bold text-blue-600">45,000,000 PhP</span>
                         </span>
                     </div>
 
@@ -114,19 +114,19 @@ export default function Project1Highlights() {
                         <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
                             <span>
                                 Duration:{" "}
-                                <span className="font-bold text-red-600">12 months</span>
+                                <span className="font-bold text-blue-600">12 months</span>
                             </span>
                             <span className="hidden sm:inline-block text-gray-400">|</span>{" "}
                             {/* Separator for horizontal display, now gray */}
                             <span>
                                 Start Date:{" "}
-                                <span className="font-bold text-red-600">January 1, 2024</span>
+                                <span className="font-bold text-blue-600">January 1, 2024</span>
                             </span>
                             <span className="hidden sm:inline-block text-gray-400">-</span>{" "}
                             {/* Separator for horizontal display, now gray */}
                             <span>
                                 End Date:{" "}
-                                <span className="font-bold text-red-600">
+                                <span className="font-bold text-blue-600">
                                     December 31, 2024
                                 </span>
                             </span>
@@ -136,24 +136,24 @@ export default function Project1Highlights() {
 
                 <div className="mt-16 py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
                     <h3 className="md:text-3xl text-2xl font-extrabold text-gray-800 mb-12 text-center leading-tight">
-                        Focus <span className="text-red-700">Areas</span>
+                        Focus <span className="text-blue-700">Areas</span>
                     </h3>
                     <div className="max-w-3xl mx-auto">
                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8  text-base md:text-xl text-gray-700">
                             <li className="flex items-center">
-                                <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
+                                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
                                 <span className="font-semibold">Water Quality Assessment</span>
                             </li>
                             <li className="flex items-center">
-                                <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
+                                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
                                 <span className="font-semibold">Inland Capture Fisheries</span>
                             </li>
                             <li className="flex items-center">
-                                <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
+                                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
                                 <span className="font-semibold">Watershed Health</span>
                             </li>
                             <li className="flex items-center">
-                                <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
+                                <span className="inline-block h-3 w-3 rounded-full bg-blue-600 mr-3 flex-shrink-0"></span>
                                 <span className="font-semibold">Socioeconomic Conditions</span>
                             </li>
                         </ul>
@@ -164,7 +164,7 @@ export default function Project1Highlights() {
             <div className="mt-16 px-4 sm:px-6 lg:px-8">
                 <h3 className="text-3xl mb-10 sm:text-3xl font-extrabold text-gray-800 text-center leading-tight">
                     Target{" "}
-                    <span className="text-red-700">Sustainable Development Goals</span>
+                    <span className="text-blue-700">Sustainable Development Goals</span>
                 </h3>
                 <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto text-center ">
                     The Phase 1 project of MINSUPALA-IRDC is directly aligned with and
@@ -195,7 +195,7 @@ export default function Project1Highlights() {
                 {" "}
                 {/* Added padding, background, shadow, and rounded corners */}
                 <h3 className="text-3xl mb-10 sm:text-3xl font-extrabold text-gray-800 text-center leading-tight">
-                    <span className="text-red-700">Resources and Materials</span>
+                    <span className="text-blue-700">Resources and Materials</span>
                 </h3>
                 <p className="md:text-lg text-xl text-gray-700 max-w-3xl mx-auto ">
                     Explore our comprehensive research output, detailed findings, and

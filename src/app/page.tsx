@@ -1,175 +1,56 @@
+import Image from "next/image";
+import { AppCarousel } from "./ui/app-carousel";
+import Project1Highlights from "./HighlightsProject1";
+import EventSection from "./EventSection";
+import ConsortiumMemberSection from "./ConsortiumMemberSection";
+import HeadquartersSection from "./HeadquarterSection";
+import Project2Highlights from "./HighlightsProject2";
 
-import Link from 'next/link';
-import HeadquartersSection from './HeadquarterSection';
-import NewsAndUpdateRowSecion from './NewsAndUpdateRowSection';
-import Image from 'next/image';
-// const RealWorldImpact = () => {
-//   const impactItems = [
-//     {
-//       label: "Policy Briefs",
-//       image: "/assets/resources/front-page/features/feature-1.jpg",
-//       alt: "Policy Briefs",
-//     },
-//     {
-//       label: "Initiative Beta",
-//       image: "/assets/resources/front-page/features/feature-2.jpg",
-//       alt: "Watershed Health",
-//     },
-//     {
-//       label: "Community Outreach",
-//       image: "/assets/resources/front-page/features/feature-3.jpg",
-//       alt: "In land capute fisheries",
-//     },
-//     {
-//       label: "Socio-economic Protocol Assessment", // Improved label for clarity
-//       image: "/assets/resources/front-page/features/feature-4.jpg",
-//       alt: "Description for impact image 4",
-//     },
-//   ];
 
-//   return (
-//     <section className="bg-gradient-to-r from-red-500 to-red-900 text-white py-50 my-10">
-//       <div className=" mx-auto text-center">
-//         <p className="text-lg sm:text-xl mb-6 max-w-3xl mx-auto opacity-90">
-//           Discover the tangible ways our work contributes to real-world change and sustainable development.
-//         </p>
 
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
-//           {impactItems.map((item, idx) => (
-//             <div
-//               key={idx}
-//               className="relative group overflow-hidden "
-//             >
-//               <img
-//                 src={item.image}
-//                 alt={item.alt}
-//                 className="w-full h-56 object-cover transform "
-//               />
-//               <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-base font-semibold px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-//                 {item.label}
-//               </div>
-//               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
 
-const RealWorldImpact = () => {
-  const impactItems = [
-    {
-      label: "Policy Briefs",
-      image: "/assets/resources/front-page/features/feature-1.jpg",
-      alt: "Policy Briefs",
-    },
-    {
-      label: "Initiative Beta",
-      image: "/assets/resources/front-page/features/feature-2.jpg",
-      alt: "Watershed Health",
-    },
-    {
-      label: "Community Outreach",
-      image: "/assets/resources/front-page/features/feature-3.jpg",
-      alt: "In land capute fisheries",
-    },
-    {
-      label: "Socio-economic Protocol Assessment", // Improved label for clarity
-      image: "/assets/resources/front-page/features/feature-4.jpg",
-      alt: "Description for impact image 4",
-    },
-  ];
+function CreateMinsupalaIRDCHighlights() {
+  const currentYear = new Date().getFullYear(); // Dynamically get the current year
 
   return (
-    <section className="bg-gradient-to-r from-red-800 to-red-700  text-white py-16">
-      <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl sm:text-5xl font-extrabold mb-8 drop-shadow-lg">
-          Featured
-        </h2>
-        <p className="text-lg sm:text-xl mb-12 max-w-6xl mx-auto opacity-90">
-          Discover the tangible ways our work contributes to real-world change and sustainable development.
-        </p>
+    <>
+      <div id="home-projects" className="w-full bg-neutral-900 py-50 mt-20 md:mt-0 relative overflow-hidden">
+        {/* Subtle Geometric Dot Pattern Overlay (more integrated) */}
+        <div
+          className="absolute inset-0 z-0 opacity-10" // Reduced opacity slightly for more subtlety
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='1' fill='%23a0aec0'/%3E%3C/svg%3E\")", // Changed fill to a soft gray for better blend
+            backgroundSize: "20px 20px",
+          }}
+        ></div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {impactItems.map((item, idx) => (
-            <div
-              key={idx}
-              className="relative group overflow-hidden "
-            >
-              <img
-                src={item.image}
-                alt={item.alt}
-                // These are the crucial classes for your requirements:
-                className="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-base font-semibold px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                {item.label}
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
-            </div>
-          ))}
+        {/* Content */}
+        <div className="relative z-10 text-centerf px-4 text-center">
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide uppercase leading-tight">
+            <span className="text-gray-50 opacity-90">MINSUPALA IRDC</span>{" "}
+            <span className="text-blue-400 opacity-90">Projects</span>
+          </h3>
+          <p className="mt-4 text-lg text-gray-300 opacity-80 max-w-2xl mx-auto">
+            Discover the key achievements and impactful projects that define our commitment to Mindanao Sulu and Palawan.
+          </p>
         </div>
+        {/* add z index triangle here pointing down */}
       </div>
-    </section>
+    </>
   );
-};
-
-
-const TopSection = () =>{
-  return (
-<div className="py-50 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center bg-white">
-        <div className="max-w-4xl w-full space-y-10">
-
-          <div>
-            <h2 className="text-8 xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-tight">
-              <span className="text-red-800">Minsupala IRDC</span>
-            </h2>
-            <p className="mt-4 text-base md:text-lg text-gray-700">
-              Mindanao Sulu Palawan - Innovative Research and Development Consortium
-            </p>
-
-
-            <div className="mt-6 flex justify-center gap-4">
-              <Link
-                href="/about"
-                className="px-6 py-3 bg-red-700 text-white font-semibold focus:outline-none focus:ring-2 
-                focus:ring-red-500 focus:ring-opacity-75 "
-              >
-                Learn More
-              </Link>
-              <Link
-                href="#news"
-                className="px-6 py-3 bg-red-700 text-white font-semibold 
-                focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 "
-              >
-                Recent News
-              </Link>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-
-  )
 }
 
-
-export default function Dashboard() {
+export default function Home() {
   return (
-
-    <section>
-      
-      {TopSection()}
-
-
-
-      {RealWorldImpact()}
-
-
-      <NewsAndUpdateRowSecion></NewsAndUpdateRowSecion>
+    <>
+      <AppCarousel></AppCarousel>
+      <EventSection></EventSection>
+      <ConsortiumMemberSection></ConsortiumMemberSection>
+      {CreateMinsupalaIRDCHighlights()}
+      <Project1Highlights></Project1Highlights>
+      <Project2Highlights></Project2Highlights>
       <HeadquartersSection></HeadquartersSection>
-    </section>
+    </>
   );
 }
