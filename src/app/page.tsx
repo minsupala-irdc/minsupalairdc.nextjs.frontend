@@ -116,44 +116,41 @@ const RealWorldImpact = () => {
 };
 
 
-const TopSection = () =>{
+const TopSection = () => {
   return (
-<div className="py-50 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center bg-white">
-        <div className="max-w-4xl w-full space-y-10">
+    <div className="py-20 px-4 flex flex-col items-center justify-center text-center bg-white sm:py-32 sm:px-6 lg:px-8">
+      <div className="max-w-4xl w-full space-y-8 sm:space-y-10">
 
-          <div>
-            <h2 className="text-8 xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-tight">
-              <span className="text-red-800">Minsupala IRDC</span>
-            </h2>
-            <p className="mt-4 text-base md:text-lg text-gray-700">
-              Mindanao Sulu Palawan - Innovative Research and Development Consortium
-            </p>
+        <div>
+          {/* Mobile-first text sizing: default to smaller, then grow on md and xl */}
+          <h2 className=" font-bold text-gray-900 tracking-tight leading-tight sm:text-6xl md:text-7xl lg:text-6xl mt-20">
+            Welcome to <span className="text-red-800">Minsupala IRDC</span>
+          </h2>
+          <p className=" text-base text-gray-700 sm:mt-4 sm:text-lg mb-20">
+            Mindanao Sulu Palawan - Innovative Research and Development Consortium
+          </p>
 
-
-            <div className="mt-6 flex justify-center gap-4">
-              <Link
-                href="/about"
-                className="px-6 py-3 bg-red-700 text-white font-semibold focus:outline-none focus:ring-2 
-                focus:ring-red-500 focus:ring-opacity-75 "
-              >
-                Learn More
-              </Link>
-              <Link
-                href="#news"
-                className="px-6 py-3 bg-red-700 text-white font-semibold 
-                focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 "
-              >
-                Recent News
-              </Link>
-            </div>
-
+          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <Link
+              href="/about"
+              className="px-6 py-3 bg-red-700 text-white font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 transition duration-150 ease-in-out hover:bg-red-600"
+            >
+              Learn More
+            </Link>
+            <Link
+              href="#news"
+              className="px-6 py-3 bg-red-700 text-white font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 transition duration-150 ease-in-out hover:bg-red-600"
+            >
+              Recent News
+            </Link>
           </div>
 
         </div>
-      </div>
 
-  )
-}
+      </div>
+    </div>
+  );
+};
 
 
 export default function Dashboard() {
@@ -167,8 +164,19 @@ export default function Dashboard() {
 
       {RealWorldImpact()}
 
+<div className="flex flex-col items-center text-center space-y-6  m-20">
+  {/* News section limited to 3 items */}
+  <NewsAndUpdateRowSecion limit={3} />
 
-      <NewsAndUpdateRowSecion></NewsAndUpdateRowSecion>
+  {/* See More button */}
+  <Link
+    href="/news"
+    className="px-6 py-3 bg-red-700 text-white font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 transition duration-150 ease-in-out hover:bg-red-600"
+  >
+    See More
+  </Link>
+</div>
+
       <HeadquartersSection></HeadquartersSection>
     </section>
   );

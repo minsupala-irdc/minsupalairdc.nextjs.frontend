@@ -4,7 +4,7 @@ import Image from "next/image";
 // This is your data
 const phase1Books = [
     { school: "msu-mag", src: "/assets/resources/phase1-books/consolidated-terminal-report.png" },
-    { school: "msu-mag", src: "/assets/resources/phase1-books/msu-mag-bird-species-sifaran-watershed.png" }
+    // { school: "msu-mag", src: "/assets/resources/phase1-books/msu-mag-bird-species-sifaran-watershed.png" }
 ];
 
 const sdgLogos = [

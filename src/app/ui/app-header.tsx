@@ -15,6 +15,14 @@ export function AppHeader() {
     setIsDrawerOpen(false);
   };
 
+  const DRAWER_LINKS = [
+    {href: "/",label: "Home"},
+    {href: "/news",label: "News and Updates"},
+    {href: "/projects",label: "Projects"},
+    {href: "/members",label: "Members"},
+    {href: "/about",label: "About"},
+  ]
+
   return (
     // <header className="sticky top-0 z-50 bg-gray-100 shadow">
     <header className="sticky top-0 z-50 bg-white shadow-sm">
@@ -43,7 +51,7 @@ export function AppHeader() {
               // as it helps Next.js serve the most appropriate image resolution.
               sizes="(max-width: 768px) 100px, 150px"
             />
-            <Link href="/" className="text-lg" >
+            <Link href="/" className="text-lg " >
               Minsupala IRDC
             </Link>
           </div>
@@ -52,7 +60,7 @@ export function AppHeader() {
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4">
               <Link
-                href="/#news"
+                href="/news"
                 scroll={true}
                 className="block px-4 py-2 "
               >
@@ -136,22 +144,28 @@ export function AppHeader() {
           </button>
 
           <div className="space-y-4 mt-10">
-            <Link
-              href="/"
-              className="block px-4 py-2"
-              onClick={handleLinkClick}
-            >
-              Home
-            </Link>
-            <a
+            <h1 className="block px-4 py-2  font-montserrat">Minsupala IRDC</h1>
+           <nav>
+            {DRAWER_LINKS.map((link) => (
+              <Link
+                key={link.href} // It's good practice to provide a unique key for list items
+                href={link.href}
+                className="block px-4 py-2 font-semibold text-gray-800"
+                onClick={handleLinkClick}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+            {/* <a
               href="/#home-updates"
               className="block px-4 py-2"
               onClick={handleLinkClick}
             >
-              Updates
+              News and Updates
             </a>
             <a
-              href="/#home-projects"
+              href="/projects"
               className="block px-4 py-2"
               onClick={handleLinkClick}
             >
@@ -170,7 +184,8 @@ export function AppHeader() {
               onClick={handleLinkClick}
             >
               About
-            </Link>
+            </Link> */}
+
           </div>
         </div>
       </div>

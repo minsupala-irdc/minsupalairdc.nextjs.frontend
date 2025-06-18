@@ -231,16 +231,10 @@ const articles = [
 ];
 
 
-type Props = {
-  limit?: number;
-};
 
-// add paramter here..  the parameter lets say show 3 only will only show 3 artiles elese show all by default
-export default function NewsAndUpdateRowSecion({ limit }: Props) {
-
-  let data =  limit ? articles.slice(0, limit) : articles;
+export default function NewsAndUpdateRowSecion() {
   return (
-    <div id="news" className="py-10">
+    <div id="news" className="py-20">
       <div className=" mx-auto max-w-6xl sm:px-6 lg:px-8 py-16 flex flex-col items-center justify-center text-center ">
         <div className="text-center">
           <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight px-5 md:px-0 drop-shadow-sm">
@@ -250,10 +244,11 @@ export default function NewsAndUpdateRowSecion({ limit }: Props) {
           </p>
         </div>
       </div>
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
 
-        {data.map((item, index) => {
+
+        {articles.map((item, index) => {
           const Card = (
             <div className="bg-white shadow-xs rounded overflow-hidden flex flex-col justify-between h-full transition transform hover:shadow-md hover:-translate-y-1">
               <img
