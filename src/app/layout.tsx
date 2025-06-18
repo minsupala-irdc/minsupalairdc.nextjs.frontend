@@ -87,7 +87,7 @@ export default function RootLayout({
         // `nunito.className` will make Nunito Sans the default font for your content.
         // `antialiased` is a common utility class (e.g., from Tailwind CSS) for smoother font rendering.
         // If you are not using Tailwind, you can remove `antialiased`.
-        className={`${nunito.className} antialiased`}
+        className={`${nunito.className} antialiased min-h-screen`}
       >
         {/* Your application's header */}
         <AppHeader />
