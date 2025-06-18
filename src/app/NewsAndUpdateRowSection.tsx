@@ -240,10 +240,10 @@ export default function NewsAndUpdateRowSecion({ limit }: Props) {
 
   let data =  limit ? articles.slice(0, limit) : articles;
   return (
-    <div id="news" className="py-10">
-      <div className=" mx-auto max-w-6xl sm:px-6 lg:px-8 py-16 flex flex-col items-center justify-center text-center ">
-        <div className="text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight px-5 md:px-0 drop-shadow-sm">
+    <div id="news" className="sm:py-1 lg:py-10 ">
+      <div className=" mx-auto max-w-6xl sm:px-1 sm:py-5 lg:px-8 flex flex-col items-center justify-center text-center ">
+        <div className="text-center  py-20">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight sm:px-1 md:px-0 drop-shadow-sm ">
             <span className="text-red-800">Recent</span> Events &amp; Activities
           </h2>
           <p className="md:text-lg text-xl text-gray-600 max-w-5xl mx-auto text-center px-5 md:px-0">Stay informed about our latest conferences, workshops, and community engagement initiatives.

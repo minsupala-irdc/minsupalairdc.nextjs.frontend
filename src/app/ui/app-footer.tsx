@@ -23,16 +23,15 @@ export function AppFooter() {
     <footer className="w-full pt-10 pb-20 bg-white">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 px-4">
         {/* Address */}
-        <ul className="flex flex-col">
-          <li className="font-extrabold">Headquarter's Address</li>
+        <ul className="flex flex-col flex-1/3"> {/* Added flex-1 */}
+          <li className="font-extrabold">IRDC Address</li>
           <li className="text-gray-500">
-            56F9+R4V, Shariff Aguak - Cotabato City Rd <br />
-            Datu Odin Sinsuat, Maguindanao, Philippines
+            Institute of Management, Mindanao State University-Maguindanao, National Highway, Brgy. Tamontaka, Datu Odin Sinsuat 9601 Dinaig, Philippines
           </li>
         </ul>
 
         {/* Contacts and Web Team */}
-        <ul className="">
+        <ul className="flex flex-col flex-1"> {/* Added flex-1 */}
           <li>
             <ul id="contact-section">
               <li className="font-extrabold">Contacts</li>
@@ -40,7 +39,6 @@ export function AppFooter() {
                 minsupala-irdc@msumaguindanao.edu.ph
               </li>
               <li className="text-gray-500">0975 410 3538</li>
-              
             </ul>
           </li>
 
@@ -50,52 +48,45 @@ export function AppFooter() {
               <li className="text-gray-500">minsupala.irdc.itsupport@msumaguindanao.edu.ph</li>
             </ul>
           </li>
-          
         </ul>
 
-        
         {/* About */}
-        <ul className="flex flex-col">
-          <li className="font-extrabold">About Minsupala-IRDC</li>
+        <ul className="flex flex-col flex-1"> {/* Added flex-1 */}
+          <li className="font-extrabold">About</li>
           <li><Link href="/about"> History</Link></li>
           <li><Link
-                href="/#home-members"
-                scroll={true}
-                className="block"
-              >
-                Members
-              </Link></li>
+            href="/members"
+            scroll={true}
+            className="block"
+          >
+            Members
+          </Link></li>
         </ul>
 
-        <ul className="flex flex-col">
-          <li className="">
+        {/* Social media */}
+        <ul className="flex flex-col flex-1/5"> {/* Added flex-1 */}
+          <li>
             <ul>
               <li className="font-extrabold"> Social media</li>
               <li className="mt-1">
-              <Link
-                href="https://www.facebook.com/profile.php?id=61576379536301"
-                target="_blank" // This is the correct usage for opening in a new tab
-                rel="noopener noreferrer" // Good practice for security with target="_blank"
-                className=""
-              >Facebook Page
-                {/* <FontAwesomeIcon
-                  icon={faFacebook}
-                  className="w-9 h-auto text-gray-800"
-                />  */}
-                
-              </Link>
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61576379536301"
+                  target="_blank" // This is the correct usage for opening in a new tab
+                  rel="noopener noreferrer" // Good practice for security with target="_blank"
+                  className=""
+                >Facebook Page
+                  {/* <FontAwesomeIcon
+                    icon={faFacebook}
+                    className="w-9 h-auto text-gray-800"
+                  /> */}
+
+                </Link>
 
               </li>
             </ul>
           </li>
         </ul>
 
-
-        {/* Resources */}
-        {/* <ul className="flex-1">
-          <li className="font-extrabold">Resources</li>
-          <li>To be added</li>
-        </ul> */}
       </div>
 
       {/* Logos section */}
