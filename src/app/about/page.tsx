@@ -74,7 +74,7 @@ const TimelineStatusIndicator: React.FC<TimelineStatusIndicatorProps> = ({ statu
 };
 
 // --- Reusable TimelineEventDetails Component (nested) ---
-interface TimelineEventDetailsProps extends TimelineEventOthers {}
+interface TimelineEventDetailsProps extends TimelineEventOthers { }
 
 const TimelineEventDetails: React.FC<TimelineEventDetailsProps> = ({ duration, cost }) => {
   if (!duration && !cost) {
@@ -85,7 +85,7 @@ const TimelineEventDetails: React.FC<TimelineEventDetailsProps> = ({ duration, c
     <div className="mt-4 text-sm text-gray-600">
       {duration && (
         <p className="flex items-center mb-1">
-          <svg className="w-4 h-4 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <svg className="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L11 10.586V6z" clipRule="evenodd"></path>
           </svg>
           <span className="font-semibold">Duration:</span> {duration}
@@ -122,7 +122,7 @@ const timelineEvents: TimelineEvent[] = [
   {
     // This event is now marked as 'in-progress' in its 'others' property
     date: 'January 1, 2024', // Based on current date (May 2025), this is ongoing
-    title:   'MINSUPALA IRDC Phase 1 Project: Assessment and Characterization of Water Quality. Inland Capture Fisheries, Watershed, and Socioeconomic of important Water Bodies for Social and Economic Transformation in Central Mindanao',
+    title: 'MINSUPALA IRDC Phase 1 Project: Assessment and Characterization of Water Quality. Inland Capture Fisheries, Watershed, and Socioeconomic of important Water Bodies for Social and Economic Transformation in Central Mindanao',
     description: 'The project aims to provide a comprehensive assessment and characterization of the important water bodies in Central Mindanao to gather scientific data and information. This management practice is for the sustainable development and transformation of the region. The project recognizes the intrinsic linkages between water quality, inland capture fisheries, watershed health, and socio-economic conditions, emphasizing the need to address these aspects holistically.',
     imageUrl: '/assets/resources/phase1-books/status-report-on-water-quality-inland-capture-fisheries-watersheds-and-socio-economic-conditions-of-important-water-bodies-in-central-mindanao.png',
     others: {
@@ -130,7 +130,7 @@ const timelineEvents: TimelineEvent[] = [
       cost: '45,000,000.00',
       status: 'Done',
     }
-  },{
+  }, {
     date: 'January 30, 2024',
     title: 'MINSUPALA-IRDC organized its first consortium meeting',
     description: "The meeting reaffirmed the initial agreement and discussed implementation strategies for the approved 45-million-peso research project titled 'Assessment and Characterization of Water Quality, Inland Capture Fisheries, Watershed, and Socio-Economic Aspects of Important Water Bodies for Social and Economic Transformation.' This project, a priority under the consortium’s Research and Development agenda, aims to optimize the use of Central Mindanao’s abundant natural water resources.",
@@ -156,18 +156,51 @@ const timelineEvents: TimelineEvent[] = [
 ];
 
 
+const IRDCSection = () => {
+  return (
+    <section className="w-full mx-auto bg-red-600 text-white ">
+      <div className="">
+        <div
+          className="relative overflow-hidden flex flex-col justify-end" // Added flex-col and justify-end for aligning content to bottom
+          style={{
+            minHeight: '90vh', // Slightly increased minHeight for more space
+            backgroundImage: `url('/assets/resources/irdc-timeline/Sec-Pangandaman-msu-capture.jpg')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            // You can add backgroundRepeat: 'no-repeat' if you want to be explicit
+          }}
+        >
+          {/* Content that sits on top of the background image */}
+          {/* Padding adjusted for responsiveness */}
+          <div className="relative z-10 p-6 text-left bg-gradient-to-r from-red-800 to-red-500">
+  <div className="max-w-6xl mx-auto flex flex-col">
+    <p className="text-2xl font-bold text-gray-200 text-justify md:p-5 border-l-7 border-red-900 pl-4">
+      The Mindanao Sulu Palawan - Innovative Research and Development Consortium
+    </p>
+
+    <p className="md:pl-8 text-lg text-gray-200 leading-relaxed max-w-3xl">
+      A brainchild of DBM Secretary Amenah F. Pangandaman, created to strengthen research collaboration and sustainable development in Mindanao.
+    </p>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const CreateTimeline: React.FC = () => {
   return (
-    <section className="w-full py-16 bg-gray-50 ">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="w-full">
+
+      {IRDCSection()}
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight sm:text-5xl">
-            <span className="text-blue-700">MinSuPala-IRDC</span> Journey
+            <span className="text-red-600">Consortium</span> Journey
           </h1>
-          <h2 className="text-xl font-semibold text-gray-700 mb-6 max-w-2xl mx-auto">
-            Uniting SUCs for a Better Mindanao, Sulu, and Palawan
-          </h2>
           <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
             The Mindanao Sulu Palawan – Innovative Research and Development Consortium (MinSuPala-IRDC) came together with a shared purpose, addressing regional challenges through collaborative research and development efforts.
           </p>
@@ -176,7 +209,7 @@ const CreateTimeline: React.FC = () => {
         {/* Timeline Container */}
         <div className="relative wrap overflow-hidden p-0 md:p-10 h-full">
           {/* Vertical Line - Hidden on mobile, block on md and up */}
-          <div className="border-2 absolute border-opacity-20 border-blue-700 h-full border left-1/2 transform -translate-x-1/2 hidden md:block"></div>
+          <div className="border-2 absolute border-opacity-20 border-red-700 h-full border left-1/2 transform -translate-x-1/2 hidden md:block"></div>
 
           {timelineEvents.map((event, index) => {
             const eventStatus = getEventStatus(event);
@@ -202,7 +235,7 @@ const CreateTimeline: React.FC = () => {
                       <TimelineStatusIndicator status="Done" />
                     )}
                   </h3>
-                  <h4 className="mb-2 font-semibold text-blue-700 text-xl">{event.title}</h4>
+                  <h4 className="mb-2 font-semibold text-red-700 text-xl">{event.title}</h4>
                   <p className="text-sm leading-snug tracking-wide text-gray-700 text-opacity-100 text-justify">{event.description}</p>
 
                   {/* Use the nested TimelineEventDetails component */}
@@ -216,7 +249,7 @@ const CreateTimeline: React.FC = () => {
 
                 {/* Icon / Triangle - Hidden on mobile, flex on md and up */}
                 <div className="z-10 hidden md:flex items-center justify-center order-1 bg-transparent w-8 h-8">
-                  <svg className="w-8 h-8 text-blue-800" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <svg className="w-8 h-8 text-red-800" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     {/* Path for a downward-pointing triangle */}
                     <path d="M12 21L2 3h20z" />
                   </svg>
