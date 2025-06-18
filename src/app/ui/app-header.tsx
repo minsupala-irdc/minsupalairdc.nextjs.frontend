@@ -28,9 +28,9 @@ export function AppHeader() {
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* <div className="w-full mx-auto bg-gradient-to-r from-red-800 to-red-600"> */}
       <div className="w-full mx-auto bg-black">
-       <p className="text-xs p-1 max-w-6xl mx-auto text-white/60 px-3 text-center md:text-left">
-  Mindanao Sulu Palawan - Innovative Research and Development Consortium
-</p>
+        <p className="text-xs p-1 max-w-6xl mx-auto text-white/60 px-3 text-left">
+          Mindanao Sulu Palawan - Innovative Research and Development Consortium
+        </p>
       </div>
 
 
@@ -41,7 +41,7 @@ export function AppHeader() {
           <div className="flex items-center space-x-2">
             <Image
               src="/assets/resources/logo-irdc-lightbulb.png"
-              alt="MinSuPala Innovative Research and Development Consortium"
+              alt="MINSUPALA Innovative Research and Development Consortium"
               // Remove 'fill' when you want the image to have specific dimensions next to other elements.
               // Instead, define 'width' and 'height' or use Tailwind's sizing classes.
               width={50} // Adjust this value as needed for your logo's desired width
@@ -52,7 +52,7 @@ export function AppHeader() {
               sizes="(max-width: 768px) 100px, 150px"
             />
             <Link href="/" className="text-lg " >
-              MinSuPala-IRDC
+              Minsupala IRDC
             </Link>
           </div>
 
@@ -144,7 +144,7 @@ export function AppHeader() {
           </button>
 
           <div className="space-y-4 mt-10">
-            <h1 className="block px-4 py-2  font-montserrat">MinSuPala-IRDC</h1>
+            <h1 className="block px-4 py-2  font-montserrat">Minsupala IRDC</h1>
            <nav>
             {DRAWER_LINKS.map((link) => (
               <Link

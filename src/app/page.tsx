@@ -3,10 +3,6 @@ import Link from 'next/link';
 import HeadquartersSection from './HeadquarterSection';
 import NewsAndUpdateRowSecion from './NewsAndUpdateRowSection';
 import Image from 'next/image';
-import MemberPage from './members/page';
-import ProjectPage from './projects/page';
-import UpcomingEventsRowSection from './UpcomingEventsRowSection';
-
 // const RealWorldImpact = () => {
 //   const impactItems = [
 //     {
@@ -61,33 +57,65 @@ import UpcomingEventsRowSection from './UpcomingEventsRowSection';
 //   );
 // };
 
-const FeaturedSection = () => {
+const RealWorldImpact = () => {
+  const impactItems = [
+    {
+      label: "Policy Briefs",
+      image: "/assets/resources/front-page/features/feature-1.jpg",
+      alt: "Policy Briefs",
+    },
+    {
+      label: "Initiative Beta",
+      image: "/assets/resources/front-page/features/feature-2.jpg",
+      alt: "Watershed Health",
+    },
+    {
+      label: "Community Outreach",
+      image: "/assets/resources/front-page/features/feature-3.jpg",
+      alt: "In land capute fisheries",
+    },
+    {
+      label: "Socio-economic Protocol Assessment", // Improved label for clarity
+      image: "/assets/resources/front-page/features/feature-4.jpg",
+      alt: "Description for impact image 4",
+    },
+  ];
+
   return (
-    <section className="text-white">
+    <section className="bg-gradient-to-r from-red-800 to-red-700  text-white py-16">
       <div className="max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        
-        {/*
-          Removed fixed height (h-96) from the parent div.
-          The image will now dictate the height of this div.
-          Removed background-gray-100 as it might not be needed.
-        */}
-        <div className="relative w-full flex items-center justify-center">
-          <Image
-            src="/assets/resources/irdc-joint-statement-picture.jpg"
-            alt="IRDC Joint Statement - group of people signing documents"
-            // Provide the intrinsic width and height of your image
-            // This is crucial for Next.js to calculate the aspect ratio
-            width={1200} // Replace with the actual width of your image
-            height={800} // Replace with the actual height of your image
-            // No 'fill' prop
-            // No 'style' prop with objectFit
-            className="w-full h-auto" // Tailwind classes to make it full width and auto height
-          />
+        <h2 className="text-4xl sm:text-5xl font-extrabold mb-8 drop-shadow-lg">
+          Featured
+        </h2>
+        <p className="text-lg sm:text-xl mb-12 max-w-6xl mx-auto opacity-90">
+          Discover the tangible ways our work contributes to real-world change and sustainable development.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+          {impactItems.map((item, idx) => (
+            <div
+              key={idx}
+              className="relative group overflow-hidden "
+            >
+              <img
+                src={item.image}
+                alt={item.alt}
+                // These are the crucial classes for your requirements:
+                className="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-300 ease-in-out"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white text-base font-semibold px-4 py-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                {item.label}
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 };
+
+
 const TopSection = () => {
   return (
     <div className="py-20 px-4 flex flex-col items-center justify-center text-center bg-white sm:py-32 sm:px-6 lg:px-8">
@@ -129,27 +157,27 @@ export default function Dashboard() {
   return (
 
     <section>
+      
+      {TopSection()}
 
-      {/* {TopSection()} */}
-      {FeaturedSection()}
 
 
-      <div className="flex flex-col items-center text-center space-y-6 mb-20">
-        {/* News section limited to 3 items */}
-        <NewsAndUpdateRowSecion limit={3} />
+      {RealWorldImpact()}
 
-        {/* See More button */}
-        <Link
-          href="/news"
-          className="px-6 py-3 bg-red-700 text-white font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 transition duration-150 ease-in-out hover:bg-red-600"
-        >
-          See More
-        </Link>
-      </div>
-      <UpcomingEventsRowSection></UpcomingEventsRowSection>
-      <MemberPage></MemberPage>
+<div className="flex flex-col items-center text-center space-y-6  m-20">
+  {/* News section limited to 3 items */}
+  <NewsAndUpdateRowSecion limit={3} />
 
-      {/* <HeadquartersSection></HeadquartersSection> */}
+  {/* See More button */}
+  <Link
+    href="/news"
+    className="px-6 py-3 bg-red-700 text-white font-semibold rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 transition duration-150 ease-in-out hover:bg-red-600"
+  >
+    See More
+  </Link>
+</div>
+
+      <HeadquartersSection></HeadquartersSection>
     </section>
   );
 }
