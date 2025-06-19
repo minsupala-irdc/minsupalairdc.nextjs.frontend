@@ -103,36 +103,14 @@ const TimelineEventDetails: React.FC<TimelineEventDetailsProps> = ({
     <div className="mt-4 text-sm text-gray-600">
       {duration && (
         <p className="flex items-center mb-1">
-          <svg
-            className="w-4 h-4 mr-2 text-red-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l3 3a1 1 0 001.414-1.414L11 10.586V6z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-          <span className="font-semibold">Duration:</span> {duration}
+          
+          <span className="font-bold">Duration:&nbsp;&nbsp;</span> {duration}
         </p>
       )}
       {cost && (
         <p className="flex items-center">
-          <svg
-            className="w-4 h-4 mr-2 text-green-500"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2V6a2 2 0 00-2-2H4zm1.5 9.5A1.5 1.5 0 107 15h2.586l1.207 1.207a1 1 0 001.414-1.414L11.414 14H15a1 1 0 100-2h-3.586l-1.207-1.207a1 1 0 00-1.414 1.414L9.414 12H6a1 1 0 100 2h3.586l-1.207 1.207a1 1 0 00-1.414 1.414L6.586 14z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-          <span className="font-semibold">Cost:</span> ₱{cost}
+         
+          <span className="font-bold">Cost:&nbsp;&nbsp;</span> ₱{cost}
         </p>
       )}
     </div>
