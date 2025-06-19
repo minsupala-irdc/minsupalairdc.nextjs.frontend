@@ -8,7 +8,7 @@ function CreateMinsupalaIRDCHighlights() {
 
   return (
     <>
-      <div id="home-projects" className="w-full bg-neutral-900 py-10 md:py-50 relative overflow-hidden">
+      <div id="home-projects" className="w-full bg-neutral-900 py-50 mt-20 md:mt-0 relative overflow-hidden">
         {/* Subtle Geometric Dot Pattern Overlay (more integrated) */}
         <div
           className="absolute inset-0 z-0 opacity-10" // Reduced opacity slightly for more subtlety
@@ -21,11 +21,11 @@ function CreateMinsupalaIRDCHighlights() {
 
         {/* Content */}
         <div className="relative z-10 text-centerf px-4 text-center">
-          <h3 className="text-2xl md:text-5xl font-extrabold tracking-wide uppercase leading-tight">
-            <span className="text-gray-50 opacity-90">MINSUPALA-IRDC</span>{" "}
-            <span className="text-red-500 opacity-90">Projects</span>
+          <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide uppercase leading-tight">
+            <span className="text-gray-50 opacity-90">MINSUPALA IRDC</span>{" "}
+            <span className="text-red-700 opacity-90">Projects</span>
           </h3>
-          <p className="mt-4 md:text-lg text-gray-300 opacity-80 max-w-2xl mx-auto">
+          <p className="mt-4 text-lg text-gray-300 opacity-80 max-w-2xl mx-auto">
             Discover the key achievements and impactful projects that define our commitment to Mindanao Sulu and Palawan.
           </p>
         </div>

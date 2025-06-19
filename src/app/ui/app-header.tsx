@@ -27,17 +27,15 @@ export function AppHeader() {
     // <header className="sticky top-0 z-50 bg-gray-100 shadow">
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* <div className="w-full mx-auto bg-gradient-to-r from-red-800 to-red-600"> */}
-      
-
-      <div className="w-full py-0 bg-black">
-        <div className="flex  items-center text-center max-w-7xl mx-auto px-4 text-gray-800 font-bold">
-  <p className="text-xs pl-10 p-3 max-w-6xl  text-white/60 px-3 text-center md:text-left">
+      <div className="w-full mx-auto bg-black">
+        <p className="text-xs p-1 max-w-6xl mx-auto text-white/60 px-3 text-left">
           Mindanao Sulu Palawan - Innovative Research and Development Consortium
         </p>
-        </div>
       </div>
 
-      <nav className="w-full py-0">
+
+
+      <nav className="w-full py-3">
         <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800 font-bold">
           {/* Left: Logo */}
           <div className="flex items-center space-x-2">
@@ -46,8 +44,8 @@ export function AppHeader() {
               alt="MINSUPALA Innovative Research and Development Consortium"
               // Remove 'fill' when you want the image to have specific dimensions next to other elements.
               // Instead, define 'width' and 'height' or use Tailwind's sizing classes.
-              width={30} // Adjust this value as needed for your logo's desired width
-              height={30} // Adjust this value as needed for your logo's desired height
+              width={50} // Adjust this value as needed for your logo's desired width
+              height={50} // Adjust this value as needed for your logo's desired height
               className="object-contain"
               // The 'sizes' prop is still useful for Next.js image optimization
               // as it helps Next.js serve the most appropriate image resolution.
