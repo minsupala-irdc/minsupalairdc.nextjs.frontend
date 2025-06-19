@@ -1,4 +1,4 @@
-import NewsAndUpdateRowSecion from "../NewsAndUpdateRowSection";
+import NewsAndUpdateRowSecion from "./NewsAndUpdateRowSection";
 
 export default function NewsPage (){
     return (
