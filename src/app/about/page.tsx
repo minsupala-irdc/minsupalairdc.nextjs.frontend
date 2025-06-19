@@ -285,7 +285,7 @@ const CreateTimeline: React.FC = () => {
                 <div
                   className={`order-2 md:order-1 bg-white rounded-lg md:shadow-lg w-full md:w-5/12 px-4 py-4 transition-all duration-300 ease-in-out mb-4 md:mb-${MARGIN_CARD_IMAGE_TIMELINE} ${cardOpacityClass} ${cardHoverClass}`}
                 >
-                  <h3 className="mb-2 font-bold text-gray-800 md:text-lg flex items-center">
+                  {/* <h3 className="mb-2 font-bold text-gray-800 md:text-lg flex items-center">
                     {event.date}
                     {isInProgress && event.others?.status === "In-progress" && (
                       <TimelineStatusIndicator status="In-progress" />
@@ -293,7 +293,7 @@ const CreateTimeline: React.FC = () => {
                     {isDone && event.others?.status === "Done" && (
                       <TimelineStatusIndicator status="Done" />
                     )}
-                  </h3>
+                  </h3> */}
                   <h4 className="mb-2 font-semibold text-red-700 md:text-xl">
                     {event.title}
                   </h4>
