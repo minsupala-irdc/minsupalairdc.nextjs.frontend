@@ -52,7 +52,7 @@ export function AppFooter() {
     </li>
     <li>
       <Link
-        href="/#home-members"
+        href="/members"
         scroll={true}
         className="text-gray-600 hover:underline"
       >

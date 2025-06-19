@@ -113,11 +113,13 @@ export default function Dashboard() {
 
       <div className="flex flex-col md:flex-row gap-6">
         {/* Upcoming Events – 1/5 width on md+ */}
-        <div className="w-full md:w-2/6 ">
+        <div className="w-full md:w-2/7 ">
           <h2 className="text-lg font-extrabold mb-2">Upcoming Events</h2>
           <ul className="pl-5 space-y-2">
             <li className="list-disc marker:text-gray-500 hover:bg-gray-50 p-3 rounded transition duration-200">
-              <p className="font-bold text-gray-800">Nutritional Analysis Training</p>
+              <p className="font-bold text-gray-800">
+                Nutritional Analysis Training
+              </p>
               <p className="text-sm text-gray-500">
                 Date: July 2-4, 2025 · General Santos City
               </p>
@@ -126,7 +128,7 @@ export default function Dashboard() {
         </div>
 
         {/* Right Side – 4/5 width on md+ */}
-        <div className="w-full md:w-4/6 flex flex-col gap-6 ">
+        <div className="w-full md:w-5/7 flex flex-col gap-6 ">
           {/* News and Updates */}
           <div className="bg-gray-100 p-4">
             <h2 className="text-lg font-extrabold mb-4">News and Updates</h2>
@@ -137,7 +139,10 @@ export default function Dashboard() {
                   key={key}
                   className="w-full md:w-1/3 flex flex-col items-center text-center"
                 >
-                  <Link href={item.link_facebook} className="block w-full hover:underline">
+                  <Link
+                    href={item.link_facebook}
+                    className="block w-full hover:underline"
+                  >
                     <div className="w-full h-40 relative overflow-hidden rounded">
                       <Image
                         src={item.img}
@@ -162,31 +167,52 @@ export default function Dashboard() {
             </Link>
           </div>
 
-          {/* Members */}
-          <div className="p-4 ">
-            <h2 className="text-lg font-extrabold mb-4">
-              MinSuPala-IRDC Members
-            </h2>
-            <ul className="pl-5 space-y-1 flex flex-col gap-2 ">
-              {UNIVERSITIES.map((member, key) => (
-                <li key={key}>
-                  <Link
-                    href={member.url}
-                    className="flex items-center gap-2 hover:underline"
-                  >
-                    <Image
-                      src={member.src}
-                      alt={member.label}
-                      width={24}
-                      height={24}
-                    />
-                    <span className="font-semibold tracking-tight text-gray-600">
-                      {member.label}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          <div className="flex">
+            {/* Members */}
+            <div className="p-4 ">
+              <h2 className="text-lg font-extrabold mb-4">
+                MinSuPala-IRDC Members
+              </h2>
+              <ul className="pl-5 space-y-1 flex flex-col gap-4">
+                {UNIVERSITIES.map((member, key) => (
+                  <li key={key}>
+                    <Link
+                      href={member.url}
+                      className="flex items-center gap-2 hover:underline"
+                    >
+                      <Image
+                        src={member.src}
+                        alt={member.label}
+                        width={24}
+                        height={24}
+                      />
+                      <span className="font-semibold tracking-tight text-gray-600">
+                        {member.label}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="w-full md:w-2/6 p-4">
+              <h2 className="text-lg font-extrabold mb-2">Social Media</h2>
+                
+            <Link
+              href="https://www.facebook.com/profile.php?id=61576379536301"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full hover:underline"
+            >
+              <p className=" text-left text-gray-800 mt-2">
+                Facebook Page
+              </p>
+            </Link>
+
+            </div>
+
+
+
           </div>
         </div>
       </div>
