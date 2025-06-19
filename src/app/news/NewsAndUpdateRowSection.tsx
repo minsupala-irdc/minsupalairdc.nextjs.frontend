@@ -23,7 +23,7 @@ function truncateText(text: string): string {
 }
 
 
-const articles = [
+export const ARTICLES = [
   {
     event: "Policy Brief Writeshop",
     content:
@@ -238,17 +238,16 @@ type Props = {
 // add paramter here..  the parameter lets say show 3 only will only show 3 artiles elese show all by default
 export default function NewsAndUpdateRowSecion({ limit }: Props) {
 
-  let data =  limit ? articles.slice(0, limit) : articles;
+  let data =  limit ? ARTICLES.slice(0, limit) : ARTICLES;
   return (
     <div id="news" className="py-10">
-      <div className=" mx-auto max-w-6xl sm:px-6 lg:px-8 py-16 flex flex-col items-center justify-center text-center ">
-        <div className="text-center">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight px-5 md:px-0 drop-shadow-sm">
+      <div className=" mx-auto max-w-6xl sm:px-6 lg:px-8 md:py-16 flex flex-col items-center justify-center text-center ">
+        
+          <h2 className="text-xl  md:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight px-5 md:px-0 md:drop-shadow-sm">
             <span className="text-red-800">Recent</span> Events &amp; Activities
           </h2>
-          <p className="md:text-lg text-xl text-gray-600 max-w-5xl mx-auto text-center px-5 md:px-0">Stay informed about our latest conferences, workshops, and community engagement initiatives.
+          <p className="md:text-lg text-sm text-gray-600 max-w-5xl mx-auto text-center px-5 md:px-0">Stay informed about our latest conferences, workshops, and community engagement initiatives.
           </p>
-        </div>
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 ">
