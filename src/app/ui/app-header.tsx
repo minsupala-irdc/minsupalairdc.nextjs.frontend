@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export function AppHeader() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -16,24 +16,24 @@ export function AppHeader() {
   };
 
   const DRAWER_LINKS = [
-    {href: "/",label: "Home"},
-    {href: "/news",label: "News and Updates"},
-    {href: "/projects",label: "Projects"},
-    {href: "/members",label: "Members"},
-    {href: "/about",label: "About"},
-  ]
+    { href: "/", label: "Home" },
+    { href: "/news", label: "News and Updates" },
+    { href: "/projects", label: "Projects" },
+    { href: "/members", label: "Members" },
+    { href: "/about", label: "About" },
+  ];
 
   return (
     // <header className="sticky top-0 z-50 bg-gray-100 shadow">
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* <div className="w-full mx-auto bg-gradient-to-r from-red-800 to-red-600"> */}
-      
 
       <div className="w-full py-0 bg-black">
         <div className="flex  items-center text-center max-w-7xl mx-auto px-4 text-gray-800 font-bold">
-  <p className="text-xs pl-10 p-3 max-w-6xl  text-white/60 px-3 text-center md:text-left">
-          Mindanao Sulu Palawan - Innovative Research and Development Consortium
-        </p>
+          <p className="text-xs pl-10 p-3 max-w-6xl  text-white/60 px-3 text-center md:text-left">
+            Mindanao Sulu Palawan - Innovative Research and Development
+            Consortium
+          </p>
         </div>
       </div>
 
@@ -53,7 +53,7 @@ export function AppHeader() {
               // as it helps Next.js serve the most appropriate image resolution.
               sizes="(max-width: 768px) 100px, 150px"
             />
-            <Link href="/" className="text-lg " >
+            <Link href="/" className="text-lg ">
               Minsupala IRDC
             </Link>
           </div>
@@ -61,25 +61,13 @@ export function AppHeader() {
           {/* Right: Nav links and mobile menu */}
           <div className="flex items-center space-x-4">
             <div className="hidden md:flex items-center space-x-4">
-              <Link
-                href="/news"
-                scroll={true}
-                className="block px-4 py-2 "
-              >
+              <Link href="/news" scroll={true} className="block px-4 py-2 ">
                 News and Updates
               </Link>
-              <Link
-                href="/projects"
-                scroll={true}
-                className="block px-4 py-2"
-              >
+              <Link href="/projects" scroll={true} className="block px-4 py-2">
                 Projects
               </Link>
-              <Link
-                href="/members"
-                scroll={true}
-                className="block px-4 py-2"
-              >
+              <Link href="/members" scroll={true} className="block px-4 py-2">
                 Members
               </Link>
               <Link href="/about" className="block px-4 py-2">
@@ -147,18 +135,18 @@ export function AppHeader() {
 
           <div className="space-y-4 mt-10">
             <h1 className="block px-4 py-2  font-montserrat">Minsupala IRDC</h1>
-           <nav>
-            {DRAWER_LINKS.map((link) => (
-              <Link
-                key={link.href} // It's good practice to provide a unique key for list items
-                href={link.href}
-                className="block px-4 py-2 font-semibold text-gray-800"
-                onClick={handleLinkClick}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+            <nav>
+              {DRAWER_LINKS.map((link) => (
+                <Link
+                  key={link.href} // It's good practice to provide a unique key for list items
+                  href={link.href}
+                  className="block px-4 py-2 font-semibold text-gray-800"
+                  onClick={handleLinkClick}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
             {/* <a
               href="/#home-updates"
               className="block px-4 py-2"
@@ -187,7 +175,6 @@ export function AppHeader() {
             >
               About
             </Link> */}
-
           </div>
         </div>
       </div>

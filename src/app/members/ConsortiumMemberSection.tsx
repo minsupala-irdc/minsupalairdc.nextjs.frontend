@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export const UNIVERSITIES = [
     {
         src: "/assets/resources/irdc-members/adiong-memorial-state-college.png",
@@ -66,16 +66,16 @@ export default function ConsortiumMemberSection() {
     return (
         <section
             id="home-members"
-            className="w-full min-h-[66.66667vh] flex items-center justify-center bg-gray-50 py-25"
+            className="w-full min-h-[66.66667vh] flex items-center justify-center bg-gray-50 py-10 md:py-25"
         >
-            <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center">
+            <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center p-3 md:p-0">
 
 
                 <p className="text-3xl text-center font-montserrat"></p>
 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight text-center">
+                <h2 className="text-2xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight text-center">
                     {/* <span className="text-blue-800">Upcoming</span> Events & Activities */}
-                    Mindanao Sulu Palawan{" "}
+                    Mindanao Sulu Palawsan{" "}
                     <span className="text-red-700">
                         Innovative Research &<br />
                         Development Consortium
@@ -83,7 +83,7 @@ export default function ConsortiumMemberSection() {
                 </h2>
 
 
-                <p className="mt-4 mb-20 text-lg text-gray-600 text-center ">
+                <p className="mt-4 mb-10 md:mb-20 md:text-lg text-gray-600 text-center ">
                     Driving sustainable development through collaborative research and
                     development.
                 </p>
@@ -95,16 +95,17 @@ export default function ConsortiumMemberSection() {
                             index === UNIVERSITIES.length - 1;
 
                         return (
-                            <a
+                            <Link
                                 key={index}
                                 href={university.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`flex flex-col items-center transition duration-100 ease-in-out transform hover:scale-110 active:scale-95 ${isLastOdd ? "md:col-start-2" : ""
+                                className={`flex md:flex-col items-center transition duration-100 ease-in-out transform hover:scale-110 active:scale-95 ${isLastOdd ? "md:col-start-2" : ""
                                     }`}
                             >
                                 {/* Logo */}
-                                <div className="relative w-[100px] h-[100px]">
+
+                                <div className="relative min-w-[50px] min-h-[50px] md:w-[100px] md:h-[100px] ">
                                     <Image
                                         src={university.src}
                                         alt={university.label}
@@ -114,10 +115,10 @@ export default function ConsortiumMemberSection() {
                                 </div>
 
                                 {/* Label */}
-                                <span className="mt-3 text-sm text-center text-gray-700 font-medium">
+                                <span className="ml-4 md:ml-0 md:mt-3 text-sm text-left md:text-center text-gray-700 font-medium">
                                     {university.label}
                                 </span>
-                            </a>
+                            </Link>
                         );
                     })}
                 </div>

@@ -24,6 +24,19 @@ function truncateText(text: string): string {
 
 
 export const ARTICLES = [
+  
+  {
+    event: "Strategic Recalibration Strengthens MinSuPala-IRDC’s Path to Inclusive Development",
+    content:
+      "The Mindanao-Sulu-Palawan Innovative Research and Development Consortium (MinSuPala–IRDC) reaffirmed its commitment to strengthening institutional partnerships, aligning research development priorities, and advancing its shared vision of inclusive growth and innovation across Mindanao, Sulu, and Palawan during the Strategic Direction and Recalibration Meeting held on May 27, 2025, at the Mangostana Function Hall, Acacia Hotel, Davao City. Chaired by DBM Region XII Director Akmad J. Usman, the meeting convened the Presidents and Chancellors of the eight (8 ) founding State Universities and Colleges (SUCs), six (6) new member SUCs, and DBM Region IX Director Mark Louie Martin.",
+    event_date: "May 27, 2025",
+    img: "/assets/resources/irdc-timeline/june 17 2025 - high level meeting.jpg",
+    time: "",
+    place: "Function Room Alma, Oroderm City Functions and Events Place",
+    location: "Davao City",
+    link_facebook: "https://www.facebook.com/permalink.php?story_fbid=pfbid02KCLCQ2DmRnpvVLr18AZbsZVHWc9mh1TG6ZeZhxcdXcH59YniVGRt2mbZsQdU2HA1l&id=61576379536301",
+    author: "",
+  },
   {
     event: "Policy Brief Writeshop",
     content:
@@ -59,18 +72,6 @@ export const ARTICLES = [
     place: "Function Room Alma, Oroderm City Functions and Events Place",
     location: "Davao City",
     link_facebook: "https://www.facebook.com/permalink.php?story_fbid=pfbid02kYJLwvxFHQT8ukm8f7fHF58QbT8TMYWFia5PsCphw37wswoXtFY1ALoEa3NpjYfRl&id=61576379536301",
-    author: "",
-  },
-  {
-    event: "Strategic Recalibration Strengthens MinSuPala-IRDC’s Path to Inclusive Development",
-    content:
-      "The Mindanao-Sulu-Palawan Innovative Research and Development Consortium (MinSuPala–IRDC) reaffirmed its commitment to strengthening institutional partnerships, aligning research development priorities, and advancing its shared vision of inclusive growth and innovation across Mindanao, Sulu, and Palawan during the Strategic Direction and Recalibration Meeting held on May 27, 2025, at the Mangostana Function Hall, Acacia Hotel, Davao City. Chaired by DBM Region XII Director Akmad J. Usman, the meeting convened the Presidents and Chancellors of the eight (8 ) founding State Universities and Colleges (SUCs), six (6) new member SUCs, and DBM Region IX Director Mark Louie Martin.",
-    event_date: "May 27, 2025",
-    img: "/assets/resources/irdc-timeline/june 17 2025 - high level meeting.jpg",
-    time: "",
-    place: "Function Room Alma, Oroderm City Functions and Events Place",
-    location: "Davao City",
-    link_facebook: "https://www.facebook.com/permalink.php?story_fbid=pfbid02KCLCQ2DmRnpvVLr18AZbsZVHWc9mh1TG6ZeZhxcdXcH59YniVGRt2mbZsQdU2HA1l&id=61576379536301",
     author: "",
   },
   {
