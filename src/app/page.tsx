@@ -5,9 +5,9 @@ import { UNIVERSITIES } from "./members/ConsortiumMemberSection";
 import { ARTICLES } from "./news/NewsAndUpdateRowSection";
 
 const SDG_LOGOS = [
-  { label: "SDG 01", img: "/assets/resources/sdg/E-WEB-Goal-01.png" },
-  { label: "SDG 03", img: "/assets/resources/sdg/E-WEB-Goal-03.png" },
-  { label: "SDG 09", img: "/assets/resources/sdg/E-WEB-Goal-09.png" },
+  { label: "SDG 01", img: "/assets/resources/sdg/E-WEB-Goal-1.png" },
+  { label: "SDG 03", img: "/assets/resources/sdg/E-WEB-Goal-3.png" },
+  { label: "SDG 09", img: "/assets/resources/sdg/E-WEB-Goal-9.png" },
   { label: "SDG 11", img: "/assets/resources/sdg/E-WEB-Goal-11.png" },
   { label: "SDG 14", img: "/assets/resources/sdg/E-WEB-Goal-14.png" },
   { label: "SDG 15", img: "/assets/resources/sdg/E-WEB-Goal-15.png" },
