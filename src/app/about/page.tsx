@@ -166,7 +166,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "The project aims to provide a comprehensive assessment and characterization of the important water bodies in Central Mindanao to gather scientific data and information. This management practice is for the sustainable development and transformation of the region. The project recognizes the intrinsic linkages between water quality, inland capture fisheries, watershed health, and socio-economic conditions, emphasizing the need to address these aspects holistically.",
     imageUrl:
-      "/assets/resources/phase1-books/status-report-on-water-quality-inland-capture-fisheries-watersheds-and-socio-economic-conditions-of-important-water-bodies-in-central-mindanao.png",
+      "/assets/resources/phase1-books/consolidated-terminal-report.png",
     others: {
       duration: "12 Months",
       cost: "45,000,000.00",
