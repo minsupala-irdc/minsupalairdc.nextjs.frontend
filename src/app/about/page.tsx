@@ -140,7 +140,7 @@ const timelineEvents: TimelineEvent[] = [
     // This event is now marked as 'in-progress' in its 'others' property
     date: "January 1, 2024", // Based on current date (May 2025), this is ongoing
     title:
-      "MINSUPALA IRDC Phase 1 Project: Assessment and Characterization of Water Quality. Inland Capture Fisheries, Watershed, and Socioeconomic of important Water Bodies for Social and Economic Transformation in Central Mindanao",
+      "Ceremonial signing and launching of MOA of MinSuPala-IRDC",
     description:
       "The project aims to provide a comprehensive assessment and characterization of the important water bodies in Central Mindanao to gather scientific data and information. This management practice is for the sustainable development and transformation of the region. The project recognizes the intrinsic linkages between water quality, inland capture fisheries, watershed health, and socio-economic conditions, emphasizing the need to address these aspects holistically.",
     imageUrl:
