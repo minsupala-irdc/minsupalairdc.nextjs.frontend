@@ -5,7 +5,13 @@ import { UNIVERSITIES } from "./members/ConsortiumMemberSection";
 import { ARTICLES } from "./news/NewsAndUpdateRowSection";
 
 const SDG_LOGOS = [
-  { label: "", img: "/assets/resources/sdg/E-WEB-Goal-01.png" },
+  { label: "SDG 01", img: "/assets/resources/sdg/E-WEB-Goal-01.png" },
+  { label: "SDG 03", img: "/assets/resources/sdg/E-WEB-Goal-03.png" },
+  { label: "SDG 09", img: "/assets/resources/sdg/E-WEB-Goal-09.png" },
+  { label: "SDG 11", img: "/assets/resources/sdg/E-WEB-Goal-11.png" },
+  { label: "SDG 14", img: "/assets/resources/sdg/E-WEB-Goal-14.png" },
+  { label: "SDG 15", img: "/assets/resources/sdg/E-WEB-Goal-15.png" },
+  { label: "SDG 17", img: "/assets/resources/sdg/E-WEB-Goal-17.png" },
 ];
 export default function Dashboard() {
   const TARGET_SDGS = [1,3,9,,11,14,15,17]
@@ -48,11 +54,11 @@ export default function Dashboard() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
              
-              {[1, 3, 9, 11, 14, 15, 17].map((goalNum) => (
-                <div key={goalNum} className="flex items-center justify-center">
+              {SDG_LOGOS.map((logo,key) => (
+                <div className="flex items-center justify-center">
                   <Image
-                    src={`/assets/resources/sdg/E-WEB-GOAL-${goalNum}.png`}
-                    alt={`SDG ${goalNum}`}
+                    src={logo.img}
+                    alt={logo.label}
                     width={150}
                     height={150}
                     className="object-contain"
