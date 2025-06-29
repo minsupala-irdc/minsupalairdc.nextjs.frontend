@@ -20,6 +20,7 @@ export function AppHeader() {
     { href: "/news", label: "News and Updates" },
     { href: "/projects", label: "Projects" },
     { href: "/members", label: "Members" },
+    { href: "/reports", label: "Reports" },
     { href: "/about", label: "About" },
   ];
 
@@ -29,7 +30,7 @@ export function AppHeader() {
       {/* <div className="w-full mx-auto bg-gradient-to-r from-red-800 to-red-600"> */}
 
       <div className="w-full py-0 bg-black">
-        <div className="flex  items-center text-center max-w-7xl mx-auto px-4 text-gray-800 font-bold">
+        <div className="flex  items-center text-center max-w-7xl mx-auto px-4 text-gray-800 ">
           <p className="text-xs pl-10 p-3 max-w-6xl  text-white/60 px-3 text-center md:text-left">
             Mindanao Sulu Palawan - Innovative Research and Development
             Consortium
@@ -38,7 +39,7 @@ export function AppHeader() {
       </div>
 
       <nav className="w-full py-0">
-        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800 font-bold">
+        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800 ">
           {/* Left: Logo */}
           <div className="flex items-center space-x-2">
             <Image
@@ -66,6 +67,9 @@ export function AppHeader() {
               </Link>
               <Link href="/projects" scroll={true} className="block px-4 py-2">
                 Projects
+              </Link>
+              <Link href="/reports" scroll={true} className="block px-4 py-2">
+                Reports
               </Link>
               <Link href="/members" scroll={true} className="block px-4 py-2">
                 Members

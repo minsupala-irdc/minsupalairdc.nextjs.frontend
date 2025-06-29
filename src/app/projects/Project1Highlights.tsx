@@ -48,16 +48,13 @@ export default function Project1Highlights() {
 
         >
             <div className="max-w-3xl w-full mx-auto text-center">
-                <h1 className="text-xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8 px-5 md:px-0">
-
+                <h1 className="text-xl lg:text-2xl font-bold text-gray-800 mb-8 px-5 md:px-0">
                     Assessment and Characterization of Water Quality, Inland Capture
-                    Fisheries, Watershed, and Socioeconomic of Important Water Bodies{" "}
-                    <span className="text-red-600">
-                        for Social and Economic Transformation in Central Mindanao
-                    </span>
+                    Fisheries, Watershed, and Socioeconomic of Important Water Bodies 
+                    for Social and Economic Transformation in Central Mindanao
                 </h1>
 
-                <p className="text-justify md:text-lg sm:text-xl text-gray-700 leading-relaxed mb-10 px-5 md:px-0">
+                <p className="text-justify md:text-lg sm:text-xl text-gray-700 leading-relaxed mb-10 px-5 md:px-0 font-montserrat ">
                     The project aims to provide a comprehensive assessment and
                     characterization of the important water bodies in Central Mindanao to
                     gather scientific data and information. This management practice is
@@ -68,13 +65,13 @@ export default function Project1Highlights() {
                     holistically.
                 </p>
 
-                <div className="flex flex-col items-center justify-center text-gray-700 font-semibold text-lg mb-10">
+                <div className="flex flex-col items-center justify-center text-gray-700 text-lg mb-10">
                     {/* Project Cost (aligned to the left within its own space) */}
                     <div className="flex md:items-center mb-6">
-                        <span>
-                            Project Cost:{" "}
-                            <span className="font-bold text-red-500">45,000,000 PhP</span>
-                        </span>
+                        <p className="font-semibold ">
+                            Project Cost: &nbsp;
+                        <span className=" text-red-500">45,000,000 PhP</span>
+                        </p>&nbsp;
                     </div>
 
                     {/* Duration and Dates (horizontal on medium screens and above) */}
@@ -104,26 +101,26 @@ export default function Project1Highlights() {
                 </div>
 
                 <div className="md:mt-16 md:py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
-                    <h3 className="md:text-3xl text-xl font-extrabold text-gray-800 mb-12 text-center leading-tight">
+                    <h3 className="md:text-3xl text-xl font-extrabold text-gray-800 mb-12 text-center leading-tight font-montserrat">
                         Focus <span className="text-red-700">Areas</span>
                     </h3>
                     <div className="max-w-3xl mx-auto">
                         <ul className="grid grid-cols-1 md:grid-cols-2 md:gap-y-6 gap-x-8  text-base md:text-xl text-gray-700">
                             <li className="flex items-center">
                                 <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
-                                <span className="font-semibold">Water Quality Assessment</span>
+                                <span className="">Water Quality Assessment</span>
                             </li>
                             <li className="flex items-center">
                                 <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
-                                <span className="font-semibold">Inland Capture Fisheries</span>
+                                <span className="">Inland Capture Fisheries</span>
                             </li>
                             <li className="flex items-center">
                                 <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
-                                <span className="font-semibold">Watershed Health</span>
+                                <span className="">Watershed Health</span>
                             </li>
                             <li className="flex items-center">
                                 <span className="inline-block h-3 w-3 rounded-full bg-red-600 mr-3 flex-shrink-0"></span>
-                                <span className="font-semibold">Socioeconomic Conditions</span>
+                                <span className="">Socioeconomic Conditions</span>
                             </li>
                         </ul>
                     </div>

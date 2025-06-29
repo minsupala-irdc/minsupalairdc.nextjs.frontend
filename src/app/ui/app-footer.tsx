@@ -20,7 +20,7 @@ const logos = [
 
 export function AppFooter() {
   return (
-    <footer className="w-full pt-10 pb-20 bg-gray-100">
+    <footer className="w-full pt-10 pb-20 bg-gray-100 text-sm">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 px-4">
   {/* Address - slightly wider */}
   <ul className="flex-[1.5] flex flex-col">
@@ -32,13 +32,13 @@ export function AppFooter() {
 
   {/* Contacts and Web Team */}
   <ul className="flex-1 flex flex-col">
-    <li className="font-extrabold">Contacts</li>
-    <li className="text-gray-500">
+    <li className="font-bold">Contacts</li>
+    <li className="text-gray-500 ">
       minsupala-irdc@msumaguindanao.edu.ph
     </li>
     <li className="text-gray-500">0975 410 3538</li>
 
-    <li className="font-extrabold mt-6">Web Team</li>
+    <li className="font-gray mt-6">Web Team</li>
     <li className="text-gray-500">
       minsupala.irdc.itsupport@msumaguindanao.edu.ph
     </li>
@@ -46,7 +46,7 @@ export function AppFooter() {
 
   {/* About */}
   <ul className="flex-1 flex flex-col">
-    <li className="font-extrabold">About</li>
+    <li className="font-bold">About</li>
     <li>
       <Link href="/about" className="text-gray-600 hover:underline">History</Link>
     </li>
@@ -63,7 +63,7 @@ export function AppFooter() {
 
   {/* Social Media */}
   <ul className="flex-1 flex flex-col">
-    <li className="font-extrabold">Social Media</li>
+    <li className="font-bold">Social Media</li>
     <li className="mt-1">
       <Link
         href="https://www.facebook.com/profile.php?id=61576379536301"

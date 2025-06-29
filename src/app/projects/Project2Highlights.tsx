@@ -5,9 +5,9 @@ export default function Project2Highlights(){
       className="w-full bg-gray-100 min-h-[66.66667vh] flex flex-col items-center justify-center py-25 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-3xl w-full mx-auto text-center">
-        <h1 className="text-xl md:text-2xl lg:text-4xl font-extrabold text-gray-800 leading-tight mb-8 px-5 md:px-0">
-          Establishment and Preservation of Indigenous Fish and Crop Products
-        </h1>
+                <p className="text-xl lg:text-2xl font-bold text-gray-800 mb-8 px-5 md:px-0">
+          Establishment and Preservation of Indigenous <br></br>Fish and Crop Products
+        </p>
 
         {/* <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-10  px-3 md:px-0">
           The Indigenous Crops and Fish Research and Preservation Center aims to
@@ -20,8 +20,8 @@ export default function Project2Highlights(){
 
 <p className="text-justify md:text-lg sm:text-xl text-gray-700 leading-relaxed mb-10 px-5 md:px-0">
   The Indigenous Crops and Fish Research and Preservation Center aims to
-  <span className="text-red-700 text-bold"> conserve and promote indigenous crops and fish species unique to the
-  region</span>. This project aims to develop indigenous products while
+  conserve and promote indigenous crops and fish species unique to the
+  region. This project aims to develop indigenous products while
   preserving traditional knowledge, biodiversity, and cultural heritage
   associated with these agricultural produce, while also creating market
   opportunities for local farmers.

@@ -38,7 +38,7 @@ export default function Dashboard() {
             <h2 className="text-center md:text-left text-lg font-extrabold mb-2">Upcoming Events</h2>
             <ul className="pl-5 space-y-2">
               <li className="list-disc marker:text-gray-500 hover:bg-gray-50 p-3 rounded transition duration-200">
-                <p className="font-bold text-gray-800">
+                <p className="font-semibold text-gray-800">
                   Nutritional Analysis Training
                 </p>
                 <p className="text-sm text-gray-500">
@@ -67,24 +67,6 @@ export default function Dashboard() {
               ))}
 
 
-
-            {/* {Array.from({ length: 17 }, (_, i) => {
-                const goalNum = i + 1;
-                return (
-                  <div
-                    key={goalNum}
-                    className="flex items-center justify-center"
-                  >
-                    <Image
-                      src={`/assets/resources/sdg/E-WEB-GOAL-${goalNum}.png`} // Adjust the path to your setup
-                      alt={`SDG ${goalNum}`}
-                      width={100}
-                      height={100}
-                      className="object-contain"
-                    />
-                  </div>
-                );
-              })} */}
             </div>
 
 
@@ -100,9 +82,8 @@ export default function Dashboard() {
               href="https://www.facebook.com/profile.php?id=61576379536301"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full hover:underline text-center md:text-left 
-              font-semibold text-blue-800 mt-2" 
-            >Facebook Page
+              className="block w-full hover:underline text-center md:text-left  text-blue-800 mt-2" >
+                Facebook Page
             </Link>
           </div>
         </div>
@@ -142,12 +123,15 @@ export default function Dashboard() {
               ))}
             </ul>
 
+            <div className="flex">
+
             <Link
               href="/news"
-              className="mt-6 inline-block text-sm text-blue-700 hover:underline font-bold"
+              className="mt-6 md:ml-auto inline-block text-sm text-blue-700 hover:underline font-bold"
             >
               See More
             </Link>
+            </div>
           </div>
 
           <div className="flex flex-col p-4">
@@ -173,7 +157,7 @@ export default function Dashboard() {
                           width={24}
                           height={24}
                         />
-                        <span className="font-semibold tracking-tight text-gray-600">
+                        <span className=" tracking-tight text-gray-600">
                           {member.label}
                         </span>
                       </Link>
@@ -198,7 +182,7 @@ export default function Dashboard() {
                           width={24}
                           height={24}
                         />
-                        <span className="font-semibold tracking-tight text-gray-600">
+                        <span className="tracking-tight text-gray-600">
                           {member.label}
                         </span>
                       </Link>

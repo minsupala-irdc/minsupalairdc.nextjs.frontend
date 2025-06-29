@@ -1,7 +1,7 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 // Correctly import your fonts from next/font/google
-import { Nunito_Sans, Montserrat, Lusitana } from "next/font/google";
+import { Nunito_Sans, Montserrat, Lusitana, Inter } from "next/font/google";
 
 // Import your global CSS
 import "./globals.css";
@@ -36,6 +36,16 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap", // Recommended
 });
+
+
+const inter = Inter({
+  variable: "--font-inter",
+  weight: '400', // Only the 700 weight will be loaded for Montserrat
+  subsets: ["latin"],
+  display: "swap", // Recommended
+});
+
+
 
 // --- Metadata for the <head> section ---
 // In the App Router, you set the page title and other meta tags using this `metadata` export.
@@ -73,7 +83,6 @@ export default function RootLayout({
     // in your CSS files.
     <html
       lang="en"
-      className={`${nunito.variable} ${lusitana.variable} ${montserrat.variable}`}
     >
       {/*
         *** IMPORTANT: Removed the <Head> component here. ***
@@ -87,7 +96,7 @@ export default function RootLayout({
         // `nunito.className` will make Nunito Sans the default font for your content.
         // `antialiased` is a common utility class (e.g., from Tailwind CSS) for smoother font rendering.
         // If you are not using Tailwind, you can remove `antialiased`.
-        className={`${nunito.className} antialiased min-h-screen`}
+        className={`${inter.className} antialiased min-h-screen `}
       >
         {/* Your application's header */}
         <AppHeader />
