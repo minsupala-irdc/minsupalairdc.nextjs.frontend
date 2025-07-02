@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { submitDocumentRequest } from '../api/reports';
 
 type AppPopoutProps = {
   onClose: () => void;
-  title: string;
-  authorName: string;
-  uid: string; // Assuming uid is a string as per your usage in useState
+  document: any;
 };
 
 export function AppDocumentRequestPopup({
   onClose,
-  title,
-  authorName,
-  uid,
+  document  
 }: AppPopoutProps) {
   const [formData, setFormData] = useState({
-    user_id: uid, // uid is used here, ensure it's compatible with the expected type for user_id in submitDocumentRequest
+    document_id: document.id,
     first_name: '',
     last_name: '',
     email: '',
@@ -44,6 +40,23 @@ export function AppDocumentRequestPopup({
     }
   };
 
+// useEffect(() => {
+//   const handleKeyDown = (event: KeyboardEvent) => {
+//     if (event.key === 'Escape') {
+//       onClose();
+//     }
+//   };
+
+//   document.addEventListener('keydown', handleKeyDown);
+
+//   // 🧹 Cleanup function to remove the listener on unmount
+//   return () => {
+//     document.removeEventListener('keydown', handleKeyDown);
+//   };
+// }, [onClose]); // Add onClose to dependency array
+
+
+
   return (
     <div className="text-left fixed inset-0 z-50 flex items-center justify-center bg-gray-100/40 md:bg-gray-100/30">
       <div className="relative bg-white w-[300px] right-5 md:right-0 md:w-xl rounded-lg p-3 md:p-6">
@@ -61,11 +74,6 @@ export function AppDocumentRequestPopup({
           Send message to the author to get a copy of the report
         </p>
 
-        <div className="border-t pt-2 border-gray-200">
-          <p className="text-sm mt-1 text-gray-700">Document requested</p>
-          <p className="text-sm text-gray-500">{title}</p>
-          <p className="text-sm text-gray-500">{authorName}</p>
-        </div>
 
         <form onSubmit={handleSubmit} className="space-y-4 mt-8">
           <div>
