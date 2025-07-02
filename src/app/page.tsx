@@ -55,7 +55,7 @@ export default function Dashboard() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
              
               {SDG_LOGOS.map((logo,key) => (
-                <div className="flex items-center justify-center">
+                <div key={key} className="flex items-center justify-center">
                   <Image
                     src={logo.img}
                     alt={logo.label}
