@@ -20,7 +20,7 @@ export function AppHeader() {
     { href: "/news", label: "News and Updates" },
     { href: "/projects", label: "Projects" },
     { href: "/members", label: "Members" },
-    { href: "/reports", label: "Reports" },
+    { href: "/resources", label: "Resources" },
     { href: "/about", label: "About" },
   ];
 
@@ -68,8 +68,8 @@ export function AppHeader() {
               <Link href="/projects" scroll={true} className="block px-4 py-2">
                 Projects
               </Link>
-              <Link href="/reports" scroll={true} className="block px-4 py-2">
-                Reports
+              <Link href="/resources" scroll={true} className="block px-4 py-2">
+                Resources
               </Link>
               <Link href="/members" scroll={true} className="block px-4 py-2">
                 Members
