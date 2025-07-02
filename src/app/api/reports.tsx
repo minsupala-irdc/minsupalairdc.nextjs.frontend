@@ -2,11 +2,14 @@
 
 import { request } from "http";
 
-const BASE_URL = 'http://localhost:8000/api';
+// const BASE_URL = 'http://localhost:8000/api';
+const BASE_URL = 'https://suc.minsupalairdc.com/api'
 
 export async function getReports() {
+  // alert("attempting to get reports");
   try {
-    const res = await fetch(`${BASE_URL}/reports`, {
+    const res = await fetch(`${BASE_URL}/documents`, {
+    // const res = await fetch(`https://suc.minsupalairdc.com/api/documents`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -16,7 +19,7 @@ export async function getReports() {
     });
 
     if (!res.ok) {
-        alert("fetched data")
+      alert('Something went wrong when fetching data')
       throw new Error(`Error fetching reports: ${res.status}`);
     }
     const data = await res.json();
@@ -28,7 +31,7 @@ export async function getReports() {
   }
 }
 export async function submitDocumentRequest(requestData: {
-  user_id: string;
+  document_id: string;
   first_name: string;
   last_name: string;
   email: string;
@@ -36,10 +39,11 @@ export async function submitDocumentRequest(requestData: {
   subject: string;
   message: string;
 }) {
-  alert(JSON.stringify(requestData));
+  // alert('attempting to submit')
+  // alert(JSON.stringify(requestData));
 
   try {
-    const response = await fetch(`${BASE_URL}/document-requests`, {
+    const response = await fetch(`${BASE_URL}/document-request`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
