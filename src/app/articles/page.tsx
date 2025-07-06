@@ -43,7 +43,7 @@ export default function Page() {
       if (data) {
         setArticles(data);
       }
-      alert(data)
+      // alert(data)
     }
 
     fetchData();

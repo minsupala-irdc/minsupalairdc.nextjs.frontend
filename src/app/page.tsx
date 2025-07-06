@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-
+import { useEffect, useState } from "react";
 import { UNIVERSITIES } from "./members/ConsortiumMemberSection";
 import { ARTICLES } from "./news/NewsAndUpdateRowSection";
+import { getLatestArticles } from "./api/article";
+import { getActivities } from "./api/acitivity";
 
 const SDG_LOGOS = [
   { label: "SDG 01", img: "/assets/resources/sdg/E-WEB-Goal-1.png" },
@@ -14,7 +18,51 @@ const SDG_LOGOS = [
   { label: "SDG 17", img: "/assets/resources/sdg/E-WEB-Goal-17.png" },
 ];
 export default function Dashboard() {
-  const TARGET_SDGS = [1,3,9,,11,14,15,17]
+
+  type Article = {
+  id: number;
+  user_id: number;
+  title: string;
+  image: string;
+  image_name: string;
+  school: string;
+  is_publishable: boolean | number;
+  created_at: string;
+};
+
+type Activity={
+  id: number,
+  title: string,
+  venue: string,
+  location: string,
+  date: string,
+  time: string,
+}
+
+  const TARGET_SDGS = [1, 3, 9, , 11, 14, 15, 17];
+
+  const [latestArticles, setArticles] = useState<Article[]>([]);
+  const [upcomingActivities, setActivities] = useState<Activity[]>([]); // ✅ must be an array
+
+
+  useEffect(() => {
+    async function fetchData() {
+      
+      const data = await getLatestArticles();
+      if (data) {
+        setArticles(data);
+      }
+
+      const activ = await getActivities();
+      if (activ) {
+        setActivities(activ);
+      }
+
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <section className="max-w-7xl mx-auto px-4 py-8 flex flex-col gap-6">
       <div style={{ width: "100%" }}>
@@ -35,16 +83,25 @@ export default function Dashboard() {
           {" "}
           {/* Added flex flex-col here */}
           <div id="sideevent" className="bg-gray-100 p-4 gap-4">
-            <h2 className="text-center md:text-left text-lg font-extrabold mb-2">Upcoming Events</h2>
+            <h2 className="text-center md:text-left text-lg font-extrabold mb-2">
+              Upcoming Events
+            </h2>
+
             <ul className="pl-5 space-y-2">
-              <li className="list-disc marker:text-gray-500 hover:bg-gray-50 p-3 rounded transition duration-200">
-                <p className="font-semibold text-gray-800">
-                  Nutritional Analysis Training
-                </p>
-                <p className="text-sm text-gray-500">
-                  Date: July 2-4, 2025 · General Santos City
-                </p>
-              </li>
+              {Array.isArray(upcomingActivities) &&
+                upcomingActivities.map((activity, key) => (
+                  <li
+                    key={key}
+                    className="list-disc marker:text-gray-500 hover:bg-gray-50  rounded transition duration-200"
+                  >
+                    <p className="font-semibold text-gray-800">
+                      {activity.title}
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      {activity.date} / {activity.venue}, {activity.location}
+                    </p>
+                  </li>
+                ))}
             </ul>
           </div>
           <div id="sidesdg" className="w-full p-4 bg-gray-50 mt-4">
@@ -53,8 +110,7 @@ export default function Dashboard() {
             </h2>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
-             
-              {SDG_LOGOS.map((logo,key) => (
+              {SDG_LOGOS.map((logo, key) => (
                 <div key={key} className="flex items-center justify-center">
                   <Image
                     src={logo.img}
@@ -65,25 +121,27 @@ export default function Dashboard() {
                   />
                 </div>
               ))}
-
-
             </div>
-
-
           </div>
           {/* Other content can go here, it will push the social media down */}
           {/* For example, if you have other sections between events and social media, they would go here */}
           {/* The social media section should be at the very bottom of this column */}
-          <div id="sidesocial" className="w-full p-4 mt-4 bg-gray-50 md:mt-auto">
+          <div
+            id="sidesocial"
+            className="w-full p-4 mt-4 bg-gray-50 md:mt-auto"
+          >
             {" "}
             {/* mt-auto does the trick */}
-            <h2 className="text-lg font-extrabold mb-2 text-center md:text-left">Social Media</h2>
+            <h2 className="text-lg font-extrabold mb-2 text-center md:text-left">
+              Social Media
+            </h2>
             <Link
               href="https://www.facebook.com/profile.php?id=61576379536301"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full hover:underline text-center md:text-left  text-blue-800 mt-2" >
-                Facebook Page
+              className="block w-full hover:underline text-center md:text-left  text-blue-800 mt-2"
+            >
+              Facebook Page
             </Link>
           </div>
         </div>
@@ -92,31 +150,39 @@ export default function Dashboard() {
         <div className="w-full md:w-5/7 flex flex-col gap-6 ">
           {/* News and Updates */}
           <div className="bg-gray-100 p-4">
-            <h2 className="text-lg font-extrabold mb-4 text-center md:text-left ">News and Updates</h2>
-
+            <h2 className="text-lg font-extrabold mb-4 text-center md:text-left ">
+              News and Updates
+            </h2>
             <ul className="md:flex md:gap-6">
-              {ARTICLES.slice(0, 3).map((item, key) => (
+              {/* {latestArticles.map((art, key) => (
+              <div key={key}>
+                <h2>{art.title}</h2>
+                <p>{art.school}</p>
+                <img src={art.image} alt={art.image_name} />
+              </div>
+            ))} */}
+
+              {latestArticles.map((article, key) => (
                 <li
                   key={key}
                   className="w-full md:w-1/3 flex flex-col items-center text-center"
                 >
                   <Link
-                    href={item.link_facebook}
+                    href=""
                     className="block w-full hover:underline"
                     target="_blank" // This tells the browser to open the link in a new tab
                     rel="noopener noreferrer" // This is important for security and performance
-                        
                   >
                     <div className="w-full h-40 relative overflow-hidden rounded">
-                      <Image
-                        src={item.img}
-                        alt={item.event || `Article ${key + 1}`}
-                        fill
+                      <img
+                        src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
+                        // src=""
+                        alt="article image"
                         className="object-cover"
                       />
                     </div>
                     <p className="text-[14px] text-left text-gray-800 mt-2">
-                      {item.event}
+                      {article.title}
                     </p>
                   </Link>
                 </li>
@@ -124,13 +190,12 @@ export default function Dashboard() {
             </ul>
 
             <div className="flex">
-
-            <Link
-              href="/news"
-              className="mt-6 md:ml-auto inline-block text-sm text-blue-700 hover:underline font-bold"
-            >
-              See More
-            </Link>
+              <Link
+                href="/articles"
+                className="mt-6 md:ml-auto inline-block text-sm text-blue-700 hover:underline font-bold"
+              >
+                See More
+              </Link>
             </div>
           </div>
 
@@ -149,8 +214,8 @@ export default function Dashboard() {
                         href={member.url}
                         className="flex items-center gap-2 hover:underline"
                         target="_blank" // This tells the browser to open the link in a new tab
-                          rel="noopener noreferrer" // This is important for security and performance
-                        >
+                        rel="noopener noreferrer" // This is important for security and performance
+                      >
                         <Image
                           src={member.src}
                           alt={member.label}
@@ -173,9 +238,9 @@ export default function Dashboard() {
                       <Link
                         href={member.url}
                         className="flex items-center gap-2 hover:underline"
-                          target="_blank" // This tells the browser to open the link in a new tab
-                          rel="noopener noreferrer" // This is important for security and performance
-                        >
+                        target="_blank" // This tells the browser to open the link in a new tab
+                        rel="noopener noreferrer" // This is important for security and performance
+                      >
                         <Image
                           src={member.src}
                           alt={member.label}

@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { getReports } from "../api/report";
 import { format } from "date-fns";
 // import AppPopup from '@/app/ui/app-popup'; // Make sure this is correctly typed and exists
-import { AppDocumentRequestPopup } from "../ui/app-document-request-popup";
 import Link from "next/link";
 
 export default function ReportPage() {
@@ -36,11 +35,8 @@ const headers: Header[] = [
   return (
     <div id="news" className="py-10">
       <div className="mx-auto max-w-6xl sm:px-6 lg:px-8 md:py-16 flex flex-col items-center justify-center text-center">
-        <p className="text-gray-600 mx-auto text-sm mb-3">
-          Browse the reports published by each consortium member.{" "}
-         
-            To request a copy, clicn on the  <span className="font-bold">"Request Copy" 
-          </span> Button
+        <p className="text-gray-600 mx-auto text-sm">
+          Browse the reports published by each consortium member.
         </p>
 
           {/* List view (mobile-first, default) */}

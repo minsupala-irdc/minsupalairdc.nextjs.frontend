@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getReports } from "../api/reports";
+import { getReports } from "../api/documents";
 import { format } from "date-fns";
 // import AppPopup from '@/app/ui/app-popup'; // Make sure this is correctly typed and exists
 import { AppDocumentRequestPopup } from "../ui/app-document-request-popup";

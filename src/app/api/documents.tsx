@@ -9,8 +9,8 @@ export async function submitDocumentRequest(requestData: {
   message: string;
   affiliation: string;
 }) {
-  alert('attempting to submit')
-  alert(JSON.stringify(requestData));
+  // alert('attempting to submit')
+  // alert(JSON.stringify(requestData));
 
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_SERVER_API_GATEWAY}/document-request`, {

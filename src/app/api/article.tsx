@@ -1,6 +1,10 @@
 
 export async function getArticles() {
-  // alert("attempting to get reports");
+  alert("attempting to get reports");
+
+  fetch(`${process.env.NEXT_PUBLIC_BACKEND_SERVER_API_GATEWAY}/articles`); // Check port 8000 exists
+
+  
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_SERVER_API_GATEWAY}/articles`, {
     // const res = await fetch(`https://suc.minsupalairdc.com/api/documents`, {
@@ -15,6 +19,8 @@ export async function getArticles() {
     if (!res.ok) {
       alert('Something went wrong when fetching data')
       throw new Error(`Error fetching reports: ${res.status}`);
+    }else{
+        alert("error in the articles")
     }
 
     const data = await res.json();
@@ -22,6 +28,7 @@ export async function getArticles() {
     
     return data;
   } catch (error: any) {
+        alert( error)
     console.error('getReports error:', error.message);
     return null;
   }
