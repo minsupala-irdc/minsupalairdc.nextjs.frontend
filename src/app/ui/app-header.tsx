@@ -17,29 +17,37 @@ export function AppHeader() {
 
   const DRAWER_LINKS = [
     { href: "/", label: "Home" },
-    { href: "/news", label: "News and Updates" },
     { href: "/projects", label: "Projects" },
     { href: "/members", label: "Members" },
-    { href: "/resources", label: "Resources" },
+    { href: "/articles", label: "News " },
+    { href: "/policybriefs", label: "Policy Briefs" },
+    { href: "/reports", label: "Reports" },
     { href: "/about", label: "About" },
   ];
+
+
+
+  
 
   return (
     // <header className="sticky top-0 z-50 bg-gray-100 shadow">
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* <div className="w-full mx-auto bg-gradient-to-r from-red-800 to-red-600"> */}
 
-      <div className="w-full py-0 bg-black">
-        <div className="flex  items-center text-center max-w-7xl mx-auto px-4 text-gray-800 ">
-          <p className="text-xs pl-10 p-3 max-w-6xl  text-white/60 px-3 text-center md:text-left">
-            Mindanao Sulu Palawan - Innovative Research and Development
-            Consortium
-          </p>
-        </div>
-      </div>
+
+
+      {/* Hidden on small screens, visible on md and up */}
+<div className="hidden md:block w-full py-0 bg-black">
+  <div className="flex items-center text-center max-w-7xl mx-auto px-4 text-gray-800">
+    <p className="text-sm pl-10 p-3 max-w-6xl text-white/60 text-center md:text-left">
+      Mindanao Sulu Palawan - Innovative Research and Development Consortium
+    </p>
+  </div>
+</div>
+
 
       <nav className="w-full py-0">
-        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800 ">
+        <div className="flex items-center justify-between max-w-7xl mx-auto px-4 text-gray-800 font-semibold">
           {/* Left: Logo */}
           <div className="flex items-center space-x-2">
             <Image
@@ -60,19 +68,23 @@ export function AppHeader() {
           </div>
 
           {/* Right: Nav links and mobile menu */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 ">
             <div className="hidden md:flex items-center space-x-4">
-              <Link href="/news" scroll={true} className="block px-4 py-2 ">
-                News and Updates
-              </Link>
+           
               <Link href="/projects" scroll={true} className="block px-4 py-2">
                 Projects
               </Link>
-              <Link href="/resources" scroll={true} className="block px-4 py-2">
-                Resources
-              </Link>
               <Link href="/members" scroll={true} className="block px-4 py-2">
                 Members
+              </Link>
+              <Link href="/articles" scroll={true} className="block px-4 py-2">
+                 News
+              </Link>
+              <Link href="/policybriefs" scroll={true} className="block px-4 py-2">
+                Policy Briefs
+              </Link>
+              <Link href="/reports" scroll={true} className="block px-4 py-2">
+                Reports
               </Link>
               <Link href="/about" className="block px-4 py-2">
                 About
@@ -138,13 +150,13 @@ export function AppHeader() {
           </button>
 
           <div className="space-y-4 mt-10">
-            <h1 className="block px-4 py-2  font-montserrat">Minsupala IRDC</h1>
+            <h1 className="block px-4 py-3 font-extrabold font-montserrat">Minsupala IRDC</h1>
             <nav>
               {DRAWER_LINKS.map((link) => (
                 <Link
                   key={link.href} // It's good practice to provide a unique key for list items
                   href={link.href}
-                  className="block px-4 py-2 font-semibold text-gray-800"
+                  className="block px-4 py-3 font-medium text-gray-700 "
                   onClick={handleLinkClick}
                 >
                   {link.label}
