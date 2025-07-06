@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { UNIVERSITIES } from "./members/ConsortiumMemberSection";
-import { ARTICLES } from "./news/NewsAndUpdateRowSection";
 import { getLatestArticles } from "./api/article";
 import { getActivities } from "./api/acitivity";
 
@@ -28,6 +27,7 @@ export default function Dashboard() {
   school: string;
   is_publishable: boolean | number;
   created_at: string;
+  facebook_link: string;
 };
 
 type Activity={
@@ -167,24 +167,41 @@ type Activity={
                   key={key}
                   className="w-full md:w-1/3 flex flex-col items-center text-center"
                 >
-                  <Link
-                    href=""
-                    className="block w-full hover:underline"
-                    target="_blank" // This tells the browser to open the link in a new tab
-                    rel="noopener noreferrer" // This is important for security and performance
-                  >
-                    <div className="w-full h-40 relative overflow-hidden rounded">
-                      <img
-                        src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
-                        // src=""
-                        alt="article image"
-                        className="object-cover"
-                      />
-                    </div>
-                    <p className="text-[14px] text-left text-gray-800 mt-2">
-                      {article.title}
-                    </p>
-                  </Link>
+
+
+            {article.facebook_link ? (
+  <Link
+    href={article.facebook_link}
+    className="block w-full hover:underline"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div className="w-full h-40 relative overflow-hidden rounded">
+      <img
+        src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
+        alt="article image"
+        className="object-cover"
+      />
+    </div>
+    <p className="text-[14px] text-left text-gray-800 mt-2">
+      {article.title}
+    </p>
+  </Link>
+) : (
+  <div className="block w-full">
+    <div className="w-full h-40 relative overflow-hidden rounded">
+      <img
+        src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
+        alt="article image"
+        className="object-cover"
+      />
+    </div>
+    <p className="text-[14px] text-left text-gray-800 mt-2">
+      {article.title}
+    </p>
+  </div>
+)}
+
                 </li>
               ))}
             </ul>
