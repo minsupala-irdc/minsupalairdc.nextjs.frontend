@@ -2,7 +2,7 @@
 import { getSpecificArticle } from "@/app/api/article";
 import { FC, useEffect, useState } from "react";
 import Link from "next/link";
-
+import { use } from 'react';
 type ArticlePageProps = {
   params: {
     id: string;
@@ -10,6 +10,7 @@ type ArticlePageProps = {
 };
 
 export default function ArticlePage({ params }: ArticlePageProps) {
+  
   const [article, setArticle] = useState<any>(null); // or use a proper type if you have one
 
   useEffect(() => {
