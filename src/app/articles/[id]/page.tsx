@@ -67,6 +67,9 @@ export default function DynamicArticlePage( { params }: ArticlePageProps) {
           {article.facebook_link && (
             <Link
               href={article.facebook_link}
+               target="_blank"
+              rel="noopener noreferrer"
+              // open new tab and go there
               className="bg-blue-700 rounded py-2 px-4 text-white/90"
             >
               See Facebook
