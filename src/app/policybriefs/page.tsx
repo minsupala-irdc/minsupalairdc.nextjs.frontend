@@ -5,9 +5,6 @@ import { getPolicyBriefs } from "../api/policybrief";
 import { format } from "date-fns";
 import Link from "next/link";
 
-// import AppPopup from '@/app/ui/app-popup'; // Make sure this is correctly typed and exists
-import { AppDocumentRequestPopup } from "../ui/app-document-request-popup";
-
 export default function ReportPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [showPopup, setShowPopup] = useState<boolean>(false);
