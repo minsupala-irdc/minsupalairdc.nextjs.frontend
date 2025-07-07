@@ -23,7 +23,7 @@ type PolicyBrief = {
 
 // type of the params should be an promise that resolves to an object containing the dynamic segments as key value pairs.
 
-export default async function ArticlePage( {params}:PolicybriefProps) {
+export default function DynamicPolicyBriefPage( {params}:PolicybriefProps) {
   const searchParams = useSearchParams();
 
   const title = searchParams.get("title");

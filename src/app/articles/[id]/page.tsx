@@ -18,7 +18,7 @@ type ArticlePageProps = {
   params: Promise<{id: string}>
 };
 
-export default async function ArticlePage( { params }: ArticlePageProps) {
+export default function DynamicArticlePage( { params }: ArticlePageProps) {
   const [article, setArticle] = useState<any>(null); // or use a proper type if you have one
 
   // const article = await getSpecificArticle(params.id);

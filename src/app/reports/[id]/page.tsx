@@ -23,7 +23,7 @@ type ReportProps = {
 
 
 
-export default function ArticlePage( {params}:  ReportProps) {
+export default function DynamicReportPage( {params}:  ReportProps) {
   const searchParams = useSearchParams();
 
   const title = searchParams.get("title");
