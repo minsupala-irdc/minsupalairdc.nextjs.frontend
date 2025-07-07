@@ -4,21 +4,33 @@ import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { submitDocumentRequest } from "@/app/api/documents";
 
-type ArticlePageProps = {
-  params: {
-    id: string;
-  };
-  document: any;
+
+
+type PolicybriefProps = {
+  params: Promise<{id: string}>
 };
 
-export default function ArticlePage({ params }: ArticlePageProps) {
+type PolicyBrief = {
+  document_id: string;
+  first_name: string;
+  last_name: string;
+  email: string;
+  institution: string;
+  subject: string;
+  message: string;
+  affiliation: string;
+};
+
+// type of the params should be an promise that resolves to an object containing the dynamic segments as key value pairs.
+
+export default async function ArticlePage( {params}:PolicybriefProps) {
   const searchParams = useSearchParams();
 
   const title = searchParams.get("title");
   const school = searchParams.get("school");
 
-  const [formData, setFormData] = useState({
-    document_id: params.id,
+  const [formData, setFormData] = useState<PolicyBrief>({
+    document_id: "",
     first_name: "",
     last_name: "",
     email: "",
@@ -27,6 +39,38 @@ export default function ArticlePage({ params }: ArticlePageProps) {
     message: "",
     affiliation: "",
   });
+
+
+  useEffect(() => {
+    let isMounted = true; // Flag to prevent setting state on unmounted component
+
+    const fetchDocumentId = async () => {
+      try {
+        const resolvedParams = await params;
+        if (isMounted) { // Only update state if the component is still mounted
+          setFormData((prev) => ({
+            ...prev,
+            document_id: resolvedParams.id,
+          }));
+        }
+      } catch (error) {
+        console.error("Failed to fetch document ID:", error);
+        // Handle error, maybe set document_id to a default or show an error message
+      }
+    };
+
+    fetchDocumentId();
+
+    // Cleanup function to set isMounted to false when component unmounts
+    return () => {
+      isMounted = false;
+    };
+  }, [params]); // Dependency array now correctly contains the Promise itself,
+                      // or a derived stable value from it if possible.
+                      // If paramsPromise itself can change, this is correct.
+                      // More commonly, you'd extract the 'id' and put it here if available directly.
+
+
 
   const router = useRouter();
 
@@ -41,21 +85,6 @@ export default function ArticlePage({ params }: ArticlePageProps) {
       [e.target.name]: e.target.value,
     });
   };
-
-//   const handleSubmit = async (e: React.FormEvent) => {
-//     e.preventDefault();
-
-//     try {
-//       await submitDocumentRequest(formData); // <--- FIX: Changed from {formData} to formData
-
-//       router.back();
-//     } catch (error) {
-//       console.error("Request failed:", error);
-//       // You might want to add some user feedback here, e.g., an alert or a state to show an error message
-//     }
-//   };
-
-
 
 const [isSubmitting, setIsSubmitting] = useState(false);
 

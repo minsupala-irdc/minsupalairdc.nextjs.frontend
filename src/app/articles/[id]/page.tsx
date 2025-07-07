@@ -1,21 +1,31 @@
-"use client";
+'use client'
 import { getSpecificArticle } from "@/app/api/article";
 import { FC, useEffect, useState } from "react";
 import Link from "next/link";
-import { use } from 'react';
+
+
+type Article = {
+  title: string;
+  school: string;
+  created_at: string;
+  image?: string;
+  image_name?: string;
+  content: string;
+  facebook_link?: string;
+}; 
+
 type ArticlePageProps = {
-  params: {
-    id: string;
-  };
+  params: Promise<{id: string}>
 };
 
-export default function ArticlePage({ params }: ArticlePageProps) {
-  
+export default async function ArticlePage( { params }: ArticlePageProps) {
   const [article, setArticle] = useState<any>(null); // or use a proper type if you have one
+
+  // const article = await getSpecificArticle(params.id);
 
   useEffect(() => {
     async function fetchData() {
-      const data = await getSpecificArticle(params.id);
+      const data = await getSpecificArticle((await params).id);
       if (data) {
         setArticle(data);
       }
