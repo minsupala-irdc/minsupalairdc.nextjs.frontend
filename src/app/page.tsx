@@ -17,37 +17,34 @@ const SDG_LOGOS = [
   { label: "SDG 17", img: "/assets/resources/sdg/E-WEB-Goal-17.png" },
 ];
 export default function Dashboard() {
-
   type Article = {
-  id: number;
-  user_id: number;
-  title: string;
-  image: string;
-  image_name: string;
-  school: string;
-  is_publishable: boolean | number;
-  created_at: string;
-  facebook_link: string;
-};
+    id: number;
+    user_id: number;
+    title: string;
+    image: string;
+    image_name: string;
+    school: string;
+    is_publishable: boolean | number;
+    created_at: string;
+    facebook_link: string;
+  };
 
-type Activity={
-  id: number,
-  title: string,
-  venue: string,
-  location: string,
-  date: string,
-  time: string,
-}
+  type Activity = {
+    id: number;
+    title: string;
+    venue: string;
+    location: string;
+    date: string;
+    time: string;
+  };
 
   const TARGET_SDGS = [1, 3, 9, , 11, 14, 15, 17];
 
   const [latestArticles, setArticles] = useState<Article[]>([]);
   const [upcomingActivities, setActivities] = useState<Activity[]>([]); // ✅ must be an array
 
-
   useEffect(() => {
     async function fetchData() {
-      
       const data = await getLatestArticles();
       if (data) {
         setArticles(data);
@@ -57,7 +54,6 @@ type Activity={
       if (activ) {
         setActivities(activ);
       }
-
     }
 
     fetchData();
@@ -87,22 +83,25 @@ type Activity={
               Upcoming Events
             </h2>
 
-            <ul className="pl-5 space-y-2">
-              {Array.isArray(upcomingActivities) &&
-                upcomingActivities.map((activity, key) => (
+            {Array.isArray(upcomingActivities) && upcomingActivities.length > 0 ? (
+              <ul className="pl-5 space-y-2">
+                {upcomingActivities.map((activity, key) => (
                   <li
                     key={key}
-                    className="list-disc marker:text-gray-500 hover:bg-gray-50  rounded transition duration-200"
+                    className="list-disc marker:text-gray-500 hover:bg-gray-50 rounded transition duration-200"
                   >
-                    <p className="font-semibold text-gray-800">
-                      {activity.title}
-                    </p>
+                    <p className="font-semibold text-gray-800">{activity.title}</p>
                     <p className="text-sm text-gray-500">
                       {activity.date} / {activity.venue}, {activity.location}
                     </p>
                   </li>
                 ))}
-            </ul>
+              </ul>
+            ) : (
+              <p className="text-sm text-gray-500 italic">No upcoming events yet.</p>
+            )}
+
+
           </div>
           <div id="sidesdg" className="w-full p-4 bg-gray-50 mt-4">
             <h2 className="text-lg font-extrabold mb-4 text-center md:text-left ">
@@ -153,55 +152,46 @@ type Activity={
             <h2 className="text-lg font-extrabold mb-4 text-center md:text-left ">
               News and Updates
             </h2>
+
             <ul className="md:flex md:gap-6">
-              {/* {latestArticles.map((art, key) => (
-              <div key={key}>
-                <h2>{art.title}</h2>
-                <p>{art.school}</p>
-                <img src={art.image} alt={art.image_name} />
-              </div>
-            ))} */}
 
               {latestArticles.map((article, key) => (
                 <li
                   key={key}
                   className="w-full md:w-1/3 flex flex-col items-center text-center"
                 >
-
-
-            {article.facebook_link ? (
-  <Link
-    href={article.facebook_link}
-    className="block w-full hover:underline"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <div className="w-full h-40 relative overflow-hidden rounded">
-      <img
-        src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
-        alt="article image"
-        className="object-cover"
-      />
-    </div>
-    <p className="text-[14px] text-left text-gray-800 mt-2">
-      {article.title}
-    </p>
-  </Link>
-) : (
-  <div className="block w-full">
-    <div className="w-full h-40 relative overflow-hidden rounded">
-      <img
-        src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
-        alt="article image"
-        className="object-cover"
-      />
-    </div>
-    <p className="text-[14px] text-left text-gray-800 mt-2">
-      {article.title}
-    </p>
-  </div>
-)}
-
+                  {article.facebook_link ? (
+                    <Link
+                      href={article.facebook_link}
+                      className="block w-full hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div className="w-full h-40 relative overflow-hidden rounded">
+                        <img
+                          src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
+                          alt="article image"
+                          className="object-cover"
+                        />
+                      </div>
+                      <p className="text-[14px] text-left text-gray-800 mt-2">
+                        {article.title}
+                      </p>
+                    </Link>
+                  ) : (
+                    <div className="block w-full">
+                      <div className="w-full h-40 relative overflow-hidden rounded">
+                        <img
+                          src={`${process.env.NEXT_PUBLIC_BACKEND_SERVER}/storage/${article.image}`}
+                          alt="article image"
+                          className="object-cover"
+                        />
+                      </div>
+                      <p className="text-[14px] text-left text-gray-800 mt-2">
+                        {article.title}
+                      </p>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
