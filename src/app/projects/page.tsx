@@ -21,8 +21,8 @@ function CreateMinsupalaIRDCHighlights() {
 
         {/* Content */}
         <div className="relative z-10 text-centerf px-4 text-center">
-          <h3 className="text-2xl md:text-5xl font-extrabold tracking-wide uppercase  tracking-tight ">
-            <span className="text-gray-50 opacity-90">MINSUPALA-IRDC</span>{" "}
+          <h3 className="text-2xl md:text-5xl font-extrabold tracking-wide tracking-tight ">
+            <span className="text-gray-50 opacity-90">MinSuPala-IRDC</span>{" "}
             <span className="text-red-500 opacity-90">Projects</span>
           </h3>
           <p className="mt-4 md:text-lg text-gray-300 opacity-80 max-w-2xl mx-auto leading-tight">

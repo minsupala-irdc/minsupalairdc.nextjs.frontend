@@ -63,7 +63,7 @@ export function AppHeader() {
               sizes="(max-width: 768px) 100px, 150px"
             />
             <Link href="/" className="text-lg ">
-              Minsupala IRDC
+              MinSuPala-IRDC
             </Link>
           </div>
 
@@ -150,7 +150,7 @@ export function AppHeader() {
           </button>
 
           <div className="space-y-4 mt-10">
-            <h1 className="block px-4 py-3 font-extrabold font-montserrat">Minsupala IRDC</h1>
+            <h1 className="block px-4 py-3 font-extrabold font-montserrat">MinsuPala-IRDC</h1>
             <nav>
               {DRAWER_LINKS.map((link) => (
                 <Link
