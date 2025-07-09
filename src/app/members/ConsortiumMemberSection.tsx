@@ -70,23 +70,22 @@ export default function ConsortiumMemberSection() {
         >
             <div className="max-w-6xl w-full mx-auto flex flex-col items-center justify-center p-3 md:p-0">
 
-
                 <p className="text-3xl text-center font-montserrat"></p>
 
                 <h2 className="text-2xl lg:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight leading-tight text-center">
                     {/* <span className="text-blue-800">Upcoming</span> Events & Activities */}
-                    Mindanao Sulu Palawsan{" "}
+                    Mindanao Sulu Palawan{" "}
                     <span className="text-red-700">
                         Innovative Research &<br />
                         Development Consortium
                     </span>
                 </h2>
 
-
                 <p className="mt-4 mb-10 md:mb-20 md:text-lg text-gray-600 text-center ">
                     Driving sustainable development through collaborative research and
                     development.
                 </p>
+
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {UNIVERSITIES.map((university, index) => {
